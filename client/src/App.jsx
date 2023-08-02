@@ -1,5 +1,6 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Home from './views/home/home'
 import './App.css'
 
 //Hooks: 
@@ -16,7 +17,11 @@ import { useState, useEffect } from "react";
 function App() {
   return (
     <div>
-          <h1>Prueba de que ya levanta</h1>
+
+    <Routes>
+    <Route path='/home' element={<Home/>} />
+
+    </Routes>
 
       {/* vayan creando las orutes que quieran con sus componenetes  */}
     </div>
