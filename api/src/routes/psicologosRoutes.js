@@ -9,7 +9,7 @@ const psicologosRoutes = Router();
 
 
 // ruta de prueba http://localhost:3001/psiconection/prueba
-psicologosRoutes.get('/ruta', manejadorPrueba);
+psicologosRoutes.get('/prueba', manejadorPrueba);
 
 // ruta tipo post http://localhost:3001/psiconection/register
 
