@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -17,6 +16,8 @@ import { useState, useEffect } from "react";
 function App() {
   return (
     <div>
+          <h1>Prueba de que ya levanta</h1>
+
       {/* vayan creando las orutes que quieran con sus componenetes  */}
     </div>
   )
