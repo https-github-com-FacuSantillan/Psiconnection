@@ -11,24 +11,23 @@ import { useState, useEffect } from "react";
 //imports generales:
 
 //importamos views:
+import Landing from './views/landing/landing'
 
 //importmos components:
 
-
+//comentario
 function App() {
   const {pathname} = useLocation();
 
   return (
     <div>
-      {pathname !== '/' && <SideBar/>}
-
       <Routes>
+        {pathname !== '/' && <SideBar/>}
+        <Route path='/' element={<Landing />}></Route>
+        <Route path='/home' element={<Home />} />
 
-      <Route path='/home' element={<Home/>} />
 
-    </Routes>
-
-      {/* vayan creando las orutes que quieran con sus componenetes  */}
+      </Routes>
     </div>
   )
 }
