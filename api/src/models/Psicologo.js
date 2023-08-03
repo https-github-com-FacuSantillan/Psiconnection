@@ -55,15 +55,16 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        especialidad:{
+            type: DataTypes.ARRAY(DataTypes.STRING)
+        },
         valoracion: {
             type: DataTypes.INTEGER,
+            defaultValue: 0
         },
         whatsapp_url: {
             type: DataTypes.STRING,
-            allowNull: true,
-            validate: {
-                isUrl: true
-              }
+            allowNull: true
         },
         telefono: {
             type: DataTypes.STRING,
@@ -72,9 +73,6 @@ module.exports = (sequelize) => {
         foto: {
             type: DataTypes.STRING,
             allowNull: true,
-            validate: {
-                isUrl: true
-              }
         },
         descripcion: {
             type: DataTypes.TEXT,
@@ -82,6 +80,7 @@ module.exports = (sequelize) => {
         },
         estado_cuenta: {
             type: DataTypes.STRING,
+            defaultValue: "activo",
             allowNull: true
         },
         fecha_registro: {
@@ -90,5 +89,6 @@ module.exports = (sequelize) => {
         },
     },{
         timestamps: false,
+        freezeTableName: true
       })
 };

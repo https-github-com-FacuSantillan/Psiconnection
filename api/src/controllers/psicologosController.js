@@ -1,6 +1,3 @@
-const { encrypt, compare } = require("../helpers/handleBcrypt.js");
-const { Psicologo } = require("../db.js");
-
 //Controlador para búsqueda por id
 const getDetailController = async (id) => {
   const detail = await Psicologo.findByPk(id);
