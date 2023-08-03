@@ -15,7 +15,7 @@ import Landing from './views/landing/landing'
 
 //importmos components:
 
-
+//comentario
 function App() {
   const {pathname} = useLocation();
 
