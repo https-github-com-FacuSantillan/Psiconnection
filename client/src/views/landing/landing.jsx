@@ -5,6 +5,7 @@ import image2 from "../../Images/frases-psicologia.jpg"
 import image3 from "../../Images/psicologos-realmente-hacen-min-1024x576.jpg"
 //utilizamos css pura para el carrusel 
 import s from "../landing/landing.module.css"
+///Este comentarioAAAAA
 
 export default function Landing() {
     return (
