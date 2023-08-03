@@ -11,9 +11,15 @@ const psicologosRoutes = Router();
 // ruta de prueba http://localhost:3001/psiconection/prueba
 psicologosRoutes.get('/prueba', manejadorPrueba);
 
-// ruta tipo post http://localhost:3001/psiconection/register
 
-psicologosRoutes.post('/register', registerHandler)
+//! registro
+// ruta tipo post http://localhost:3001/psiconection/registerPsicologo --- Psicologo
+psicologosRoutes.post('/registerPsicologo', registerHandler)
+
+
+//! login 
+//ruta tipo post http://localhost:3001/psiconection/login
+psicologosRoutes.post('/login')
 
 
 module.exports = psicologosRoutes;
