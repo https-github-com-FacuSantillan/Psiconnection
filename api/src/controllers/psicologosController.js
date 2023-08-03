@@ -1,22 +1,25 @@
 const { encrypt, compare } = require('../helpers/handleBcrypt.js')
 
 // controlador de registro para crear psicologo http://localhost:3001/psiconection/registerPsicologo --- Psicologo
-const createUsuarioPsicologo = async ({ name, email, user, age, password, country, gender, license, openingHours, schedule, paymentDetails, speciality}) => {
-    if(!name || !email || !user || !age || !password || !country || !gender || !license || !openingHours || !schedule || !paymentDetails || !speciality) throw new Error('Se requieren todos los datos');
+const createUsuarioPsicologo = async ({ nombre, apellido, email, usuario, edad, password, pais, genero, licencia, disponibilidad, tarifa, especialidad, whatsAppUrl, telefono, foto, descripcion }) => {
     const passwordHash = await encrypt(password)
          PsicologoUser =  { 
-            name, 
+            nombre, 
+            apellido, 
             email, 
-            user, 
-            age, 
+            usuario, 
+            edad, 
             password: passwordHash, 
-            country, 
-            gender, 
-            license, 
-            openingHours, 
-            schedule,
-            paymentDetails,
-            speciality,
+            pais, 
+            genero, 
+            licencia, 
+            disponibilidad, 
+            tarifa, 
+            especialidad, 
+            whatsAppUrl, 
+            telefono, 
+            foto, 
+            descripcion 
         };
       
         return {

@@ -1,18 +1,23 @@
 const { encrypt, compare } = require('../helpers/handleBcrypt.js')
 
 // controlador de registro usuario http://localhost:3001/psiconection/registerUsuario --- Usuario
-const createUserController = async ({ name, age, email, user, paymentDetails, password }) => {
-    if(!name || !age || !email || !user || !paymentDetails || !password) throw new Error("Se requiren todos los datos");
+const createUserController = async ({nombre, apellido, edad, pais, genero, email, password, telefono, foto, estado}) => {
+
     const passwordHash = await encrypt(password);
 
-    const newUser = { 
-        name, 
-        age, 
+    const newUser = {
+        nombre, 
+        apellido, 
+        edad, 
+        pais, 
+        genero, 
         email, 
-        user, 
-        paymentDetails, 
-        password: passwordHash
+        password: passwordHash, 
+        telefono, 
+        foto, 
+        estado
     };
+
     return {
         Usuario: newUser
     }
