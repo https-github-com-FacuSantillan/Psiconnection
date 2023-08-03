@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 
 //importmos components:
 
-
+//comentario
 function App() {
   const {pathname} = useLocation();
 
