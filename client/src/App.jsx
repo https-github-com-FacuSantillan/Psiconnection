@@ -26,10 +26,11 @@ function App() {
         <Route path='/' element={<Landing />}></Route>
         <Route path='/home' element={<Home />} />
 
-
       </Routes>
     </div>
   )
 }
 
 export default App
+
+//prueba
