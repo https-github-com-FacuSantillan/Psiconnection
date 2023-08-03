@@ -40,8 +40,8 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 const { Psicologo, Usuario, Especialidad  } = sequelize.models;
 
-Psicologo.belongsToMany(Especialidad, { through: "PsicologoEspecialidad", timestamps: false })
-Especialidad.belongsToMany(Psicologo, { through: "PsicologoEspecialidad", timestamps: false })
+// Psicologo.belongsToMany(Especialidad, { through: "PsicologoEspecialidad", timestamps: false })
+// Especialidad.belongsToMany(Psicologo, { through: "PsicologoEspecialidad", timestamps: false })
 
 
 
