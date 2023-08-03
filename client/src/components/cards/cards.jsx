@@ -1,10 +1,9 @@
 import './cards.css'
+import ejemplo from '../../imagenes/ejemplo.jpg'
 
 export default function Cards() {
     return (
-        <div> 
-            <p>card</p>
-        </div>
-    )
+       <h1>card</h1>
+  );
 
 }
