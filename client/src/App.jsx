@@ -1,6 +1,7 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Home from './views/home/home'
+import SideBar from './components/sideBar/sideBar'
 import './App.css'
 
 //Hooks: 
@@ -15,11 +16,15 @@ import { useState, useEffect } from "react";
 
 
 function App() {
+  const {pathname} = useLocation();
+
   return (
     <div>
+      {pathname !== '/' && <SideBar/>}
 
-    <Routes>
-    <Route path='/home' element={<Home/>} />
+      <Routes>
+
+      <Route path='/home' element={<Home/>} />
 
     </Routes>
 
