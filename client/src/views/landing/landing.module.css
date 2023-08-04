@@ -1,7 +1,7 @@
 .carrusel{
     display: flex;
     flex-direction: column ;
-    justify-content: end;
+    justify-content: flex-end;
     width: 90%;
     height: 50vh;
     max-width: 120em;

@@ -21,11 +21,15 @@ function App() {
 
   return (
     <div>
-      <Routes>
-        {pathname !== '/' && <SideBar/>}
-        <Route path='/' element={<Landing />}></Route>
-        <Route path='/home' element={<Home />} />
 
+      {pathname !== '/' && <SideBar/>}
+      <Routes>
+        {/* seguir agregando rutas */}
+        {/* no modificar lo que ya esta escrito */}
+
+        <Route path='/' element={<Landing/>}/>;
+        <Route path='/home' element={<Home />} />
+        
       </Routes>
     </div>
   )
