@@ -22,8 +22,9 @@ function App() {
   return (
     <div>
       <Routes>
-        {pathname !== '/' && <SideBar/>}
+        {/* {pathname !== '/' && <SideBar/>} */}
         <Route path='/' element={<Landing />}></Route>
+        
         <Route path='/home' element={<Home />} />
 
 
