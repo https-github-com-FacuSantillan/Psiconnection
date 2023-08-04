@@ -5,14 +5,15 @@ const initialstate = {
   allPshychologists: [
     {
       id: 1,
-      nombre: "Alice",
+      nombre: "Alice  ",
       edad: 35,
       genero: "female",
       pais: "Mexico",
       horario: "AM",
-      precio: 100,
+      tarifa: 100,
       valoracion: 5,
       especializacion: "terapia familiar",
+      imagen: "https://i.pinimg.com/564x/89/e2/c8/89e2c87aa9cf710d61c8f2badcf83f24.jpg"
     },
     {
       id: 2,
@@ -21,8 +22,9 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "PM",
-      precio: 899,
+      tarifa: 899,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/6e/a9/d3/6ea9d3a86db7a28dce962115aaf815db.jpg"
 
     },
     {
@@ -32,9 +34,10 @@ const initialstate = {
       genero: "female",
       pais: "Colombia",
       horario: "AM",
-      precio: 32,
+      tarifa: 32,
       valoracion: 2,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/fc/af/a2/fcafa2726cf6f9a2ae6743a629e3e141.jpg"
 
     },
     {
@@ -44,9 +47,10 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "AM",
-      precio: 124,
+      tarifa: 124,
       valoracion: 5,
       especializacion: "terapia psicoanalitica",
+      imagen: "https://i.pinimg.com/564x/90/c0/51/90c051810494297069df2b6b9a450c15.jpg",
 
     },
     {
@@ -56,9 +60,10 @@ const initialstate = {
       genero: "female",
       pais: "Mexico",
       horario: "PM",
-      precio: 444,
+      tarifa: 444,
       valoracion: 1,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/1a/49/ac/1a49ac84e154f6769f537321908ce0fb.jpg"
 
     },
     {
@@ -68,8 +73,9 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "AM",
-      precio: 981,
+      tarifa: 981,
       especializacion: "terapia familiar",
+      imagen: "https://i.pinimg.com/564x/5e/64/cd/5e64cd5be6e7c1e0b0f7046c6949375a.jpg"
 
     },
     {
@@ -80,9 +86,10 @@ const initialstate = {
       genero: "female",
       pais: "Venezuela",
       horario: "PM",
-      precio: 333,
+      tarifa: 333,
       valoracion: 3,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/8d/ad/10/8dad10816fe5a65453a0fdb8946fcd7b.jpg"
 
     },
     {
@@ -92,33 +99,38 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "PM",
-      precio: 555,
+      tarifa: 555,
       valoracion: 4,
       especializacion: "terapia psicoanalitica",
+      imagen: "https://assets.soyhenry.com/logoOG.png"
     },
   ],
   //Psicolos que se renderizan
   psychologists: [
     {
       id: 1,
-      nombre: "Alice",
+      nombre: "Alice  ",
       edad: 35,
       genero: "female",
       pais: "Mexico",
       horario: "AM",
-      precio: 100,
+      tarifa: 100,
       valoracion: 5,
       especializacion: "terapia familiar",
+      imagen: "https://i.pinimg.com/564x/89/e2/c8/89e2c87aa9cf710d61c8f2badcf83f24.jpg"
     },
     {
       id: 2,
+     
       nombre: "Bob",
       edad: 40,
       genero: "male",
       pais: "Argentina",
       horario: "PM",
-      precio: 899,
+      tarifa: 899,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/6e/a9/d3/6ea9d3a86db7a28dce962115aaf815db.jpg"
+
     },
     {
       id: 3,
@@ -127,9 +139,11 @@ const initialstate = {
       genero: "female",
       pais: "Colombia",
       horario: "AM",
-      precio: 32,
+      tarifa: 32,
       valoracion: 2,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/fc/af/a2/fcafa2726cf6f9a2ae6743a629e3e141.jpg"
+
     },
     {
       id: 4,
@@ -138,9 +152,11 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "AM",
-      precio: 124,
+      tarifa: 124,
       valoracion: 5,
       especializacion: "terapia psicoanalitica",
+      imagen: "https://i.pinimg.com/564x/90/c0/51/90c051810494297069df2b6b9a450c15.jpg",
+
     },
     {
       id: 5,
@@ -149,9 +165,11 @@ const initialstate = {
       genero: "female",
       pais: "Mexico",
       horario: "PM",
-      precio: 444,
+      tarifa: 444,
       valoracion: 1,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/1a/49/ac/1a49ac84e154f6769f537321908ce0fb.jpg"
+
     },
     {
       id: 6,
@@ -160,19 +178,24 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "AM",
-      precio: 981,
+      tarifa: 981,
       especializacion: "terapia familiar",
+      imagen: "https://i.pinimg.com/564x/5e/64/cd/5e64cd5be6e7c1e0b0f7046c6949375a.jpg"
+
     },
     {
+
       id: 7,
       nombre: "Grace",
       edad: 29,
       genero: "female",
       pais: "Venezuela",
       horario: "PM",
-      precio: 333,
+      tarifa: 333,
       valoracion: 3,
       especializacion: "terapia de pareja",
+      imagen: "https://i.pinimg.com/564x/8d/ad/10/8dad10816fe5a65453a0fdb8946fcd7b.jpg"
+
     },
     {
       id: 8,
@@ -181,10 +204,10 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "PM",
-      precio: 555,
+      tarifa: 555,
       valoracion: 4,
       especializacion: "terapia psicoanalitica",
-
+      imagen: "https://assets.soyhenry.com/logoOG.png"
     },
   ],
 
@@ -225,12 +248,12 @@ const rootReducer = (state = initialstate, action) => {
 
       switch (order) {
         case "desPr":
-          psyOrdered.sort((a, b) => a.precio - b.precio);
-          allOrdered.sort((a, b) => a.precio - b.precio);
+          psyOrdered.sort((a, b) => a.tarifa - b.tarifa);
+          allOrdered.sort((a, b) => a.tarifa - b.tarifa);
           break;
         case "ascPr":
-          psyOrdered.sort((a, b) => b.precio - a.precio);
-          allOrdered.sort((a, b) => b.precio - a.precio);
+          psyOrdered.sort((a, b) => b.tarifa - a.tarifa);
+          allOrdered.sort((a, b) => b.tarifa - a.tarifa);
           break;
         case "desPu":
           psyOrdered.sort((a, b) => {
