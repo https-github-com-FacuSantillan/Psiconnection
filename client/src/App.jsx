@@ -27,8 +27,6 @@ function App() {
         {/* seguir agregando rutas */}
         {/* no modificar lo que ya esta escrito */}
 
-        <Route path='/' element={<Landing/>}/>;
-        <Route path='/home' element={<Home />} />
         
       </Routes>
     </div>
