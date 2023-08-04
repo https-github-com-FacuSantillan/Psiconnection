@@ -18,15 +18,14 @@ import Detail from './views/detail/detail'
 
 //comentario
 function App() {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <div>
+      {pathname !== '/' && <SideBar/>}
       <Routes>
-        {/* {pathname !== '/' && <SideBar/>} */}
-        <Route path='/' element={<Landing />}></Route>
-        
-        <Route path='/home' element={<Home />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/home' element={<Home />} /> 
         <Route path="/detail/:detailId" element={<Detail/>}></Route>
       </Routes>
     </div>
@@ -34,3 +33,5 @@ function App() {
 }
 
 export default App
+
+//prueba
