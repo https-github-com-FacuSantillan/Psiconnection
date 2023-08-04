@@ -12,8 +12,9 @@ import { useState, useEffect } from "react";
 
 //importamos views:
 import Landing from './views/landing/landing'
-
+import Detail from './views/detail/detail'
 //importmos components:
+
 
 //comentario
 function App() {
@@ -26,8 +27,7 @@ function App() {
         <Route path='/' element={<Landing />}></Route>
         
         <Route path='/home' element={<Home />} />
-
-
+        <Route path="/detail/:detailId" element={<Detail/>}></Route>
       </Routes>
     </div>
   )
