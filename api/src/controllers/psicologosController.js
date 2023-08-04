@@ -1,13 +1,9 @@
 const { encrypt, compare } = require("../helpers/handleBcrypt.js");
 const { Psicologo } = require("../db.js");
 
-//Búsqueda de todos los psicólogos activos
+//Búsqueda de todos los psicólogos
 const getPsicologosController = async () => {
-  const psicologos = await Psicologo.findAll({
-    where: {
-      estado_cuenta: "activo",
-    },
-  });
+  const psicologos = await Psicologo.findAll();
   return psicologos;
 };
 
@@ -18,7 +14,6 @@ const getPsicologoByNameController = async (name) => {
       title: {
         [Op.iLike]: `%${psicologoName}%`,
       },
-      estado_cuenta: "activo",
     },
   });
   return dbResults;

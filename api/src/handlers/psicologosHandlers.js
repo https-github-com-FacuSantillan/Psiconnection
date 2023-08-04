@@ -10,7 +10,7 @@ const manejadorPrueba = (req, res) => {
   res.status(200).send("Ruta de prueba");
 };
 
-//Handler de la ruta get que trae a todos los psicologos activos
+//Handler de la ruta get que trae a todos los psicologos
 const getPsicologosHandler = async (req, res) => {
   const { name } = req.query;
   try {
