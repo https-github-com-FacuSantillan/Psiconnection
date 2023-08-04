@@ -8,9 +8,17 @@ const manejadorPrueba = (req, res) => {
 
 // manejador de registro psicologo http://localhost:3001/psiconection/registerPsicologo --- Psicologo
 const registerHandler = async (req, res) => {
-    const { nombre, apellido, email, fecha_nacimiento, contraseña, pais, zona_horaria, horario, genero, licencia, tarifa, especialidad, whatsapp_url, telefono, foto, descripcion, fecha_registro } = req.body   
+    const { nombre, apellido, email, fecha_nacimiento, contraseña, pais, zona_horaria, horario, genero, licencia, tarifa, especialidad, whatsapp_url, telefono,descripcion, fecha_registro } = req.body
+    
+    if (!req.file || !req.file.secure_url) {
+        return res.status(400).json({ error: 'Debe seleccionar una imagen válida.' });
+      }
+
     try {
         //! validaciones
+
+        const foto = req.file.secure_url;
+        
         if(!nombre) return res.status(403).json({error: 'nombre vacio'});
         if(!apellido) return res.status(403).json({error: 'apellido vacio'});
         if(!email) return res.status(403).json({error: 'email vacio'});
