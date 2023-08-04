@@ -65,9 +65,6 @@ const createUsuarioPsicologo = async ({
     throw new Error('El email ya se encuentra activo')
   }
   //! si el email al registrarse no esta en la base de datos, entonces procede a crearse el nuevo psicologo
-
-
-
   const newPsicologoCreate = await Psicologo.create({
     nombre,
     apellido,
