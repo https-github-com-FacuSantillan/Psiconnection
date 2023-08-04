@@ -8,8 +8,12 @@ const { Psicologo } = require('../db.js')
 //Controlador para búsqueda por id
 const getDetailController = async (id) => {
   const detail = await Psicologo.findByPk(id);
+  if(!detail) {
+    throw new Error('No se encontro psicologo con ese id')
+  };
   return detail;
 };
+
 
 // controlador de registro para crear psicologo http://localhost:3001/psiconection/registerPsicologo --- Psicologo
 
