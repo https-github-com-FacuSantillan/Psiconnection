@@ -17,13 +17,13 @@ import Landing from './views/landing/landing'
 
 //comentario
 function App() {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <div>
       <Routes>
         {/* {pathname !== '/' && <SideBar/>} */}
-        <Route path='/' element={<Landing />}></Route>
+        <Route path='/' element={<Landing />} />
         
         <Route path='/home' element={<Home />} />
 

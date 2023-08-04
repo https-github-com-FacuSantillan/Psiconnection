@@ -1,45 +1,51 @@
-.carrusel{
+.landing{
+    background-color: #1a1a1a;
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    flex-direction: column ;
-    justify-content: end;
-    width: 90%;
-    height: 50vh;
-    max-width: 120em;
-    border-radius: 10px;
-    overflow: hidden;
-
-}
-.image_conteiner{
-    height: 100%;
-    width: 300%;
-    display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     align-items: center;
-    transition: all .5s ease;
-    transform: translate(-33.3%);
-
 }
-.image_conteiner img{
-    height: 100%;
-    width: calc(100% / 3);
-    background-color: green;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-.puntos{
+.row2{
     display: flex;
     justify-content: center;
-    width: 100%;
-    background-color: #fcfcfc;
-    padding: 1em;
-    border-radius: 10px;
-    box-shadow: #fcfcfc;
+    align-items: start;
+    max-width: 70%;
+    height: 600px;
 }
-.punto{
-    width: 1em;
-    height: 1em;
-    background-color: #580EF6;
-    margin-left: 20px;
-    border-radius: 100%;
+.row3{
+    height: 10%;
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.row1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: none;
+    width: 100vw;
+    height: 180px;
+    background-color: #fcfcfc;
+    
+}
+.row1 img{
+    height: 100px;
+}
+
+.row3 button{
+    background-color:#fcfcfc;
+    color: #580EF6;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 10%;
+    transition: background-color 0.3s ease;
+    &:hover{
+        background-color: #580EF6;
+        color:#fcfcfc ;
+    }
+
 
 }
