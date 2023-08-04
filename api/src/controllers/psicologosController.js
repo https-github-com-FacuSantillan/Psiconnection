@@ -5,6 +5,24 @@ const { Psicologo } = require('../db.js')
 
 
 
+//Búsqueda de todos los psicólogos
+const getPsicologosController = async () => {
+  const psicologos = await Psicologo.findAll();
+  return psicologos;
+};
+
+const getPsicologoByNameController = async (name) => {
+  const psicologoName = name.toLowerCase();
+  const dbResults = await Psicologo.findAll({
+    where: {
+      title: {
+        [Op.iLike]: `%${psicologoName}%`,
+      },
+    },
+  });
+  return dbResults;
+};
+
 //Controlador para búsqueda por id
 const getDetailController = async (id) => {
   const detail = await Psicologo.findByPk(id);
@@ -147,5 +165,7 @@ module.exports = {
   getDetailController,
   uploadFoto,
   putController,
-  deleteController
+  deleteController,
+  getPsicologoByNameController,
+  getPsicologosController
 };

@@ -16,9 +16,13 @@ const {
   subirFoto,
   checkDataUpdate,
   checkDataDelete,
+  getPsicologosHandler,
 } = require("../handlers/psicologosHandlers.js");
 
 const psicologosRoutes = Router();
+
+//Ruta que trae a todos los psicólogos, incluye búsqueda por query
+psicologosRoutes.get("/", getPsicologosHandler);
 
 //Ruta de búsqueda por id
 psicologosRoutes.get("/:id", getDetailHandler);
