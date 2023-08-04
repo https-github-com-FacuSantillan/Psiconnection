@@ -1,4 +1,6 @@
 const { Router } = require('express');
+const upload = require('../utils/upload');
+
 
 
 // handlers
@@ -14,7 +16,7 @@ psicologosRoutes.get('/prueba', manejadorPrueba);
 
 //! registro
 // ruta tipo post http://localhost:3001/psiconection/registerPsicologo --- Psicologo
-psicologosRoutes.post('/registerPsicologo', registerHandler)
+psicologosRoutes.post('/registerPsicologo', upload.single('foto'), registerHandler)
 
 
 //! login 
