@@ -10,7 +10,7 @@ const initialstate = {
       genero: "female",
       pais: "Mexico",
       horario: "AM",
-      precio: 100,
+      tarifa: 100,
       valoracion: 5,
       especializacion: "terapia familiar",
     },
@@ -22,7 +22,7 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "PM",
-      precio: 899,
+      tarifa: 899,
       especializacion: "terapia de pareja",
 
     },
@@ -33,7 +33,7 @@ const initialstate = {
       genero: "female",
       pais: "Colombia",
       horario: "AM",
-      precio: 32,
+      tarifa: 32,
       valoracion: 2,
       especializacion: "terapia de pareja",
 
@@ -45,7 +45,7 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "AM",
-      precio: 124,
+      tarifa: 124,
       valoracion: 5,
       especializacion: "terapia psicoanalitica",
 
@@ -57,7 +57,7 @@ const initialstate = {
       genero: "female",
       pais: "Mexico",
       horario: "PM",
-      precio: 444,
+      tarifa: 444,
       valoracion: 1,
       especializacion: "terapia de pareja",
 
@@ -69,7 +69,7 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "AM",
-      precio: 981,
+      tarifa: 981,
       especializacion: "terapia familiar",
 
     },
@@ -81,7 +81,7 @@ const initialstate = {
       genero: "female",
       pais: "Venezuela",
       horario: "PM",
-      precio: 333,
+      tarifa: 333,
       valoracion: 3,
       especializacion: "terapia de pareja",
 
@@ -93,7 +93,7 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "PM",
-      precio: 555,
+      tarifa: 555,
       valoracion: 4,
       especializacion: "terapia psicoanalitica",
     },
@@ -107,7 +107,7 @@ const initialstate = {
       genero: "female",
       pais: "Mexico",
       horario: "AM",
-      precio: 100,
+      tarifa: 100,
       valoracion: 5,
       especializacion: "terapia familiar",
     },
@@ -118,7 +118,7 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "PM",
-      precio: 899,
+      tarifa: 899,
       especializacion: "terapia de pareja",
     },
     {
@@ -128,7 +128,7 @@ const initialstate = {
       genero: "female",
       pais: "Colombia",
       horario: "AM",
-      precio: 32,
+      tarifa: 32,
       valoracion: 2,
       especializacion: "terapia de pareja",
     },
@@ -139,7 +139,7 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "AM",
-      precio: 124,
+      tarifa: 124,
       valoracion: 5,
       especializacion: "terapia psicoanalitica",
     },
@@ -150,7 +150,7 @@ const initialstate = {
       genero: "female",
       pais: "Mexico",
       horario: "PM",
-      precio: 444,
+      tarifa: 444,
       valoracion: 1,
       especializacion: "terapia de pareja",
     },
@@ -161,7 +161,7 @@ const initialstate = {
       genero: "male",
       pais: "Argentina",
       horario: "AM",
-      precio: 981,
+      tarifa: 981,
       especializacion: "terapia familiar",
     },
     {
@@ -171,7 +171,7 @@ const initialstate = {
       genero: "female",
       pais: "Venezuela",
       horario: "PM",
-      precio: 333,
+      tarifa: 333,
       valoracion: 3,
       especializacion: "terapia de pareja",
     },
@@ -182,7 +182,7 @@ const initialstate = {
       genero: "male",
       pais: "Colombia",
       horario: "PM",
-      precio: 555,
+      tarifa: 555,
       valoracion: 4,
       especializacion: "terapia psicoanalitica",
 
@@ -226,12 +226,12 @@ const rootReducer = (state = initialstate, action) => {
 
       switch (order) {
         case "desPr":
-          psyOrdered.sort((a, b) => a.precio - b.precio);
-          allOrdered.sort((a, b) => a.precio - b.precio);
+          psyOrdered.sort((a, b) => a.tarifa - b.tarifa);
+          allOrdered.sort((a, b) => a.tarifa - b.tarifa);
           break;
         case "ascPr":
-          psyOrdered.sort((a, b) => b.precio - a.precio);
-          allOrdered.sort((a, b) => b.precio - a.precio);
+          psyOrdered.sort((a, b) => b.tarifa - a.tarifa);
+          allOrdered.sort((a, b) => b.tarifa - a.tarifa);
           break;
         case "desPu":
           psyOrdered.sort((a, b) => {
