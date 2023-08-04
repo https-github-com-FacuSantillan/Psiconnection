@@ -21,13 +21,17 @@ function App() {
 
   return (
     <div>
-      {pathname !== '/' && <SideBar />}
       <Routes>
-        <Route path='/' element={<Landing />}></Route>
+        {/* {pathname !== '/' && <SideBar/>} */}
+        <Route path='/' element={<Landing />} />
+        
         <Route path='/home' element={<Home />} />
+
       </Routes>
     </div>
   )
 }
 
 export default App
+
+//prueba
