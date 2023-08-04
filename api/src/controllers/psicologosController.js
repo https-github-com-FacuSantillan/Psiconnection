@@ -4,9 +4,9 @@ const { Psicologo } = require('../db.js')
 //Controlador para búsqueda por id
 const getDetailController = async (id) => {
   const detail = await Psicologo.findByPk(id);
-  if(detail === null) {
+  if(!detail) {
     throw new Error('No se encontro psicologo con ese id')
-  }
+  };
   return detail;
 };
 
