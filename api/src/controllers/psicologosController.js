@@ -10,6 +10,7 @@ const getDetailController = async (id) => {
   return detail;
 };
 
+
 // controlador de registro para crear psicologo http://localhost:3001/psiconection/registerPsicologo --- Psicologo
 const createUsuarioPsicologo = async ({ nombre, apellido, email, fecha_nacimiento, contraseña, pais, zona_horaria, horario, genero, licencia, tarifa, especialidad, whatsAppUrl, telefono, foto, descripcion, fecha_registro }) => {
   const passwordHash = await encrypt(contraseña)
