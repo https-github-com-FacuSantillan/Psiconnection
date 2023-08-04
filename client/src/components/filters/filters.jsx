@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { setFilter } from "../../Redux/actions";
 import style from "./filters.module.css";
 import Orders from "../orders/orders";
+import './filters.module.css'
+
 
 const Filters = () => {
     const dispatch = useDispatch();
@@ -25,8 +27,16 @@ const Filters = () => {
         dispatch(setFilter(filters));
     };
 
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+      setSidebarOpen(!isSidebarOpen);
+    };
+  
     return (
+
         <div className={style.container}>
+
             <label className={style.label}>Especialización</label>
             <div className={style.selectContainer}>
                 <select
@@ -87,19 +97,11 @@ const Filters = () => {
                     <option value="mexico">MEXICO</option>
                 </select>
             </div>
-
-
-           
-
-            
-
-
-
+        
             <button className={style.btn} onClick={handleFilters}>
                 FILTRAR
             </button>
             <Orders/>
-
         </div>
     );
 };

@@ -31,7 +31,6 @@ function App() {
     </div>
   )
 }
-
 export default App
 
 //prueba

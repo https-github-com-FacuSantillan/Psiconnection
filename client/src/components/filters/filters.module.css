@@ -2,19 +2,18 @@
 
   .container {
     position: fixed; /* Utilizamos position: fixed para posicionar el contenedor */
-    top: 0;
+    top: 9%;
     right: 0; /* El contenedor se ubicará en el extremo derecho de la página */
-    width: 300px;
+    width: 320px;
+    height: 100%;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-around;
       flex-direction: column; /* Cambio para colocar los filtros en columna */
-      background-color: #3d3a50;
-      padding: 20px;
-      border-radius: 10px;
-      gap: 20px; /* Añadimos un espacio de 10px entre los elementos */
-
+      background-color: #2b4c7e;
+      padding: 50px;
+      gap: 0px; /* Añadimos un espacio de 7px entre los elementos */
     }
     
     .label {
@@ -79,7 +78,6 @@
       transition: background-color 0.3s, color 0.3s; /* Agregamos transiciones para una animación suave en el hover */
 
     }
-    
     .btn:hover {
       background-color: #2d2b3a; /* Cambiamos el color de fondo en el hover */
       color: white; /* Cambiamos el color del texto en el hover */
