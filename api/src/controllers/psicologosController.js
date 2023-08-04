@@ -1,5 +1,9 @@
-const { encrypt, compare } = require("../helpers/handleBcrypt.js");
-const { Psicologo } = require("../db.js");
+
+require('dotenv').config();
+const { encrypt, compare } = require('../helpers/handleBcrypt.js')
+const { Psicologo } = require('../db.js')
+
+
 
 //Búsqueda de todos los psicólogos
 const getPsicologosController = async () => {
@@ -22,10 +26,15 @@ const getPsicologoByNameController = async (name) => {
 //Controlador para búsqueda por id
 const getDetailController = async (id) => {
   const detail = await Psicologo.findByPk(id);
+  if(!detail) {
+    throw new Error('No se encontro psicologo con ese id')
+  };
   return detail;
 };
 
+
 // controlador de registro para crear psicologo http://localhost:3001/psiconection/registerPsicologo --- Psicologo
+
 const createUsuarioPsicologo = async ({
   nombre,
   apellido,
@@ -41,22 +50,24 @@ const createUsuarioPsicologo = async ({
   especialidad,
   whatsAppUrl,
   telefono,
-  foto,
   descripcion,
-  fecha_registro,
+  fecha_registro
 }) => {
-  const passwordHash = await encrypt(contraseña);
+  const passwordHash = await encrypt(contraseña)
 
-  //! verificamos que el usuario no se encuentre
+  // ! verificamos que el usuario no se encuentre
   const verifyExist = await Psicologo.findAll({
     where: {
-      email: email,
-    },
-  });
+      email: email
+    }
+  })
   if (verifyExist.length) {
-    throw new Error("El email ya se encuentra activo");
+    throw new Error('El email ya se encuentra activo')
   }
   //! si el email al registrarse no esta en la base de datos, entonces procede a crearse el nuevo psicologo
+
+
+
   const newPsicologoCreate = await Psicologo.create({
     nombre,
     apellido,
@@ -72,13 +83,25 @@ const createUsuarioPsicologo = async ({
     especialidad: especialidad,
     whatsAppUrl,
     telefono,
-    foto,
     descripcion,
-    fecha_registro,
-  });
+    fecha_registro
+  })
 
   return newPsicologoCreate;
 };
+
+
+//controlador asociacion de URL de foto a psicologo
+const uploadFoto = async ({ fotoURL, id}) => {
+  const updateFotoPsico = await Psicologo.update({ foto: fotoURL }, {
+    where: {
+      id: id
+    }
+  })
+
+  return updateFotoPsico
+};
+
 
 // Controlador para actualizar datos de un psicólogo
 const putController = async (req, res) => {
@@ -140,8 +163,9 @@ const deleteController = async (req, res) => {
 module.exports = {
   createUsuarioPsicologo,
   getDetailController,
+  uploadFoto,
   putController,
   deleteController,
   getPsicologoByNameController,
-  getPsicologosController,
+  getPsicologosController
 };

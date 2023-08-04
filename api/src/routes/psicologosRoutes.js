@@ -1,3 +1,6 @@
+
+const { Router } = require('express');
+const upload = require('../utils/upload');
 const { Router } = require("express");
 
 //Controladores
@@ -8,9 +11,9 @@ const {
 
 // handlers
 const {
-  manejadorPrueba,
   registerHandler,
   getDetailHandler,
+  subirFoto,
   checkDataUpdate,
   checkDataDelete,
   getPsicologosHandler,
@@ -20,9 +23,6 @@ const psicologosRoutes = Router();
 
 //Ruta que trae a todos los psicólogos, incluye búsqueda por query
 psicologosRoutes.get("/", getPsicologosHandler);
-
-// ruta de prueba http://localhost:3001/psiconection/prueba
-psicologosRoutes.get("/prueba", manejadorPrueba);
 
 //Ruta de búsqueda por id
 psicologosRoutes.get("/:id", getDetailHandler);
@@ -37,8 +37,11 @@ psicologosRoutes.delete("/delete", checkDataDelete, deleteController);
 // ruta tipo post http://localhost:3001/psiconection/registerPsicologo --- Psicologo
 psicologosRoutes.post("/registerPsicologo", registerHandler);
 
+
+psicologosRoutes.put('/uploadFoto/:id',upload.single('foto'), subirFoto);
 //! login
 //ruta tipo post http://localhost:3001/psiconection/login
 psicologosRoutes.post("/login");
+
 
 module.exports = psicologosRoutes;
