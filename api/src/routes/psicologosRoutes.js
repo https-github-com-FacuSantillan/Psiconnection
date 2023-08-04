@@ -13,9 +13,13 @@ const {
   getDetailHandler,
   checkDataUpdate,
   checkDataDelete,
+  getPsicologosHandler,
 } = require("../handlers/psicologosHandlers.js");
 
 const psicologosRoutes = Router();
+
+//Ruta que trae a todos los psicólogos, incluye búsqueda por query
+psicologosRoutes.get("/", getPsicologosHandler);
 
 // ruta de prueba http://localhost:3001/psiconection/prueba
 psicologosRoutes.get("/prueba", manejadorPrueba);

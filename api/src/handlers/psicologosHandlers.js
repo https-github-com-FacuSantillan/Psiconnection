@@ -1,11 +1,28 @@
 const {
   createUsuarioPsicologo,
   getDetailController,
+  getPsicologosController,
+  getPsicologoByNameController,
 } = require("../controllers/psicologosController.js");
 
 // manejador de prueba
 const manejadorPrueba = (req, res) => {
   res.status(200).send("Ruta de prueba");
+};
+
+const getPsicologosHandler = async (req, res) => {
+  const { name } = req.query;
+  try {
+    let psicologo;
+    if (name) {
+      psicologo = await getPsicologoByNameController(name);
+    } else {
+      psicologo = await getPsicologosController();
+    }
+    res.status(200).json(psicologo);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
 };
 
 const getDetailHandler = async (req, res) => {
@@ -131,4 +148,5 @@ module.exports = {
   getDetailHandler,
   checkDataUpdate,
   checkDataDelete,
+  getPsicologosHandler,
 };
