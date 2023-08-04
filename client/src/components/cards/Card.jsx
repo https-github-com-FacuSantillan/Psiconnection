@@ -1,8 +1,10 @@
 
-export default function Cards() {
+export default function Cards(props) {
     return (
        <div>
-       <h1 className='title'>card</h1>
+        {console.log(props.nombre)}
+        <img src = {props.imagen}></img>
+       <h1 className='title'>HOLAAA</h1>
        </div>
   );
 
