@@ -5,21 +5,22 @@ const initialstate = {
   allPshychologists: [
     {
       id: 1,
-      name: "Alice",
-      age: 35,
-      gender: "female",
-      country: "Mexico",
+      nombre: "Alice",
+      edad: 35,
+      genero: "female",
+      pais: "Mexico",
       horario: "AM",
       precio: 100,
-      score: 5,
+      valoracion: 5,
       especializacion: "terapia familiar",
     },
     {
       id: 2,
-      name: "Bob",
-      age: 40,
-      gender: "male",
-      country: "Argentina",
+     
+      nombre: "Bob",
+      edad: 40,
+      genero: "male",
+      pais: "Argentina",
       horario: "PM",
       precio: 899,
       especializacion: "terapia de pareja",
@@ -27,168 +28,162 @@ const initialstate = {
     },
     {
       id: 3,
-      name: "Carol",
-      age: 28,
-      gender: "female",
-      country: "Colombia",
+      nombre: "Carol",
+      edad: 28,
+      genero: "female",
+      pais: "Colombia",
       horario: "AM",
       precio: 32,
-      score: 2,
+      valoracion: 2,
       especializacion: "terapia de pareja",
 
     },
     {
       id: 4,
-      name: "David",
-      age: 45,
-      gender: "male",
-      country: "Colombia",
+      nombre: "David",
+      edad: 45,
+      genero: "male",
+      pais: "Colombia",
       horario: "AM",
       precio: 124,
-      score: 5,
+      valoracion: 5,
       especializacion: "terapia psicoanalitica",
 
     },
     {
       id: 5,
-      name: "Eva",
-      age: 32,
-      gender: "female",
-      country: "Mexico",
+      nombre: "Eva",
+      edad: 32,
+      genero: "female",
+      pais: "Mexico",
       horario: "PM",
       precio: 444,
-      score: 1,
+      valoracion: 1,
       especializacion: "terapia de pareja",
 
     },
     {
       id: 6,
-      name: "Frank",
-      age: 50,
-      gender: "male",
-      country: "Argentina",
+      nombre: "Frank",
+      edad: 50,
+      genero: "male",
+      pais: "Argentina",
       horario: "AM",
       precio: 981,
       especializacion: "terapia familiar",
 
     },
     {
+
       id: 7,
-      name: "Grace",
-      age: 29,
-      gender: "female",
-      country: "Venezuela",
+      nombre: "Grace",
+      edad: 29,
+      genero: "female",
+      pais: "Venezuela",
       horario: "PM",
       precio: 333,
-      score: 3,
+      valoracion: 3,
       especializacion: "terapia de pareja",
 
     },
     {
       id: 8,
-      name: "Henry",
-      age: 38,
-      gender: "male",
-      country: "Colombia",
+      nombre: "Henry",
+      edad: 38,
+      genero: "male",
+      pais: "Colombia",
       horario: "PM",
       precio: 555,
-      score: 4,
+      valoracion: 4,
       especializacion: "terapia psicoanalitica",
-
     },
   ],
   //Psicolos que se renderizan
   psychologists: [
     {
       id: 1,
-      name: "Alice",
-      age: 35,
-      gender: "female",
-      country: "Mexico",
+      nombre: "Alice",
+      edad: 35,
+      genero: "female",
+      pais: "Mexico",
       horario: "AM",
       precio: 100,
-      score: 5,
+      valoracion: 5,
       especializacion: "terapia familiar",
     },
     {
       id: 2,
-      name: "Bob",
-      age: 40,
-      gender: "male",
-      country: "Argentina",
+      nombre: "Bob",
+      edad: 40,
+      genero: "male",
+      pais: "Argentina",
       horario: "PM",
       precio: 899,
       especializacion: "terapia de pareja",
-
     },
     {
       id: 3,
-      name: "Carol",
-      age: 28,
-      gender: "female",
-      country: "Colombia",
+      nombre: "Carol",
+      edad: 28,
+      genero: "female",
+      pais: "Colombia",
       horario: "AM",
       precio: 32,
-      score: 2,
+      valoracion: 2,
       especializacion: "terapia de pareja",
-
     },
     {
       id: 4,
-      name: "David",
-      age: 45,
-      gender: "male",
-      country: "Colombia",
+      nombre: "David",
+      edad: 45,
+      genero: "male",
+      pais: "Colombia",
       horario: "AM",
       precio: 124,
-      score: 5,
+      valoracion: 5,
       especializacion: "terapia psicoanalitica",
-
     },
     {
       id: 5,
-      name: "Eva",
-      age: 32,
-      gender: "female",
-      country: "Mexico",
+      nombre: "Eva",
+      edad: 32,
+      genero: "female",
+      pais: "Mexico",
       horario: "PM",
       precio: 444,
-      score: 1,
+      valoracion: 1,
       especializacion: "terapia de pareja",
-
     },
     {
       id: 6,
-      name: "Frank",
-      age: 50,
-      gender: "male",
-      country: "Argentina",
+      nombre: "Frank",
+      edad: 50,
+      genero: "male",
+      pais: "Argentina",
       horario: "AM",
       precio: 981,
       especializacion: "terapia familiar",
-
     },
     {
       id: 7,
-      name: "Grace",
-      age: 29,
-      gender: "female",
-      country: "Venezuela",
+      nombre: "Grace",
+      edad: 29,
+      genero: "female",
+      pais: "Venezuela",
       horario: "PM",
       precio: 333,
-      score: 3,
+      valoracion: 3,
       especializacion: "terapia de pareja",
-
     },
     {
       id: 8,
-      name: "Henry",
-      age: 38,
-      gender: "male",
-      country: "Colombia",
+      nombre: "Henry",
+      edad: 38,
+      genero: "male",
+      pais: "Colombia",
       horario: "PM",
       precio: 555,
-      score: 4,
+      valoracion: 4,
       especializacion: "terapia psicoanalitica",
 
     },
@@ -203,14 +198,14 @@ const rootReducer = (state = initialstate, action) => {
     case SET_FILTER:
       let psyFiltered = [...state.psychoOrdered]
 
-      const { gender, country, horario, especializacion } = action.payload;
+      const { genero, pais, horario, especializacion } = action.payload;
 
-      if (gender !== "all") {
-        psyFiltered = psyFiltered.filter((psychologist) => psychologist.gender === gender);
+      if (genero !== "all") {
+        psyFiltered = psyFiltered.filter((psychologist) => psychologist.genero === genero);
       }
 
-      if (country !== 'all') {
-        psyFiltered = psyFiltered.filter((psychologist) => psychologist.country.toLowerCase() === country);
+      if (pais !== 'all') {
+        psyFiltered = psyFiltered.filter((psychologist) => psychologist.pais.toLowerCase() === pais);
       }
 
       if (horario != 'all') {
@@ -268,9 +263,33 @@ const rootReducer = (state = initialstate, action) => {
 
 
 
+          case "desPu":
+            psyOrdered.sort((a, b) => {
+              if (a.valoracion === undefined && b.valoracion === undefined) {
+                return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
+              } else if (a.valoracion === undefined) {
+                return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
+              } else if (b.valoracion === undefined) {
+                return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
+              } else {
+                return b.valoracion - a.valoracion; // Ambos elementos tienen puntuación, orden normal
+              }
+            });
+            allOrdered.sort((a, b) => {
+              if (a.valoracion === undefined && b.valoracion === undefined) {
+                return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
+              } else if (a.valoracion === undefined) {
+                return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
+              } else if (b.valoracion === undefined) {
+                return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
+              } else {
+                return b.valoracion - a.valoracion; // Ambos elementos tienen puntuación, orden normal
+              }
+            });
+            break;
         case "alf":
-          psyOrdered.sort((a, b) => a.name.localeCompare(b.name));
-          allOrdered.sort((a, b) => a.name.localeCompare(b.name));
+          psyOrdered.sort((a, b) => a.nombre.localeCompare(b.nombre));
+          allOrdered.sort((a, b) => a.nombre.localeCompare(b.nombre));
           break;
         default:
           break;
