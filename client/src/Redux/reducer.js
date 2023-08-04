@@ -16,7 +16,6 @@ const initialstate = {
     },
     {
       id: 2,
-     
       nombre: "Bob",
       edad: 40,
       genero: "male",

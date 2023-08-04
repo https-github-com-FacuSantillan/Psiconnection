@@ -1,0 +1,20 @@
+
+/* 
+    #dce0e6
+    #606d80
+    #567ebb
+    #2b4c7e
+    #1f1f20
+*/
+.detail{
+    background-color:#DCE0E6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view_psico{
+    background-color: #ffff;
+    height: 100%;
+    width: 70%;
+}
