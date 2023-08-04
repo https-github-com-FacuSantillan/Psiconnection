@@ -1,137 +1,52 @@
-.sidebar {
+/* Navbar.css */
+.navbar {
+  background-color: #2b4c7e;
+  color: #fff;
+  height: 60px;
   position: fixed;
   top: 0;
-  left: 0%;
-  width: 250px;
-  height: 100%;
-  background-color: #1a1c22;
-  color: #fff;
-  transition: left 0.3s ease-in-out;
-}
-
-.sidebar.open {
-  left: -170px;
-}
-
-.toggle-button {
-  position: absolute;
-  top: 10px;
-  left: 70%;
-  font-size: 24px;
-  background: transparent;
-  cursor: pointer;
-  height: 60px;
-  width:70px;
-  border:none;
-  transition: left 0.3s ease-in-out;
-}
-
-.toggle-button.open{
- left: 70%;
-}
-.toggle-button.close{
-  left:0%;
-}
-nav {
-  padding-top: 80px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
+  left: 0;
+  right: 0;
   display: flex;
-  padding: 15px;
-  cursor: pointer;
-}
-.li.open{
-  left: 70%;
- }
-.li.close{
-  left:20%;
- }
-
-li:last-child {
-  border-bottom: none;
+  justify-content: center;
+  align-items: center;
 }
 
-li:hover {
-  background-color: #444;
-}
-.perfilContain{
-  background-color: #2d2a3a;
-  position: relative;
-  top: 40%;
+.navbar-container {
   width: 100%;
-  height: 80px;
-  border-top-right-radius: 10px;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.perfil{
-  position: absolute;
-  left: 26%;
-  top: 20%;
-  height: 20px;
-  width: 100px;
-  cursor: pointer;
+
+.navbar-logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
 }
-.speciality{
-  position: absolute;
-  left: 27%;
-  top: 45%;
-  height: 20px;
-  width: 25%;
-  font-weight:100;
-  font-size: small;
-  cursor: pointer;
+
+.nav-menu {
+  list-style: none;
+  display: flex;
 }
-.imgSidebar{
-  position: absolute;
-  top: 23%;
-  height: 40px;
-  width: 40px;
-  border-radius: 4px;
-  left: 2%;
+
+.nav-item {
+  margin-right: 20px;
 }
-.logout{
-  position: relative;
-  top: 23%;
-  left: 78%;
-  width: 30px;
-  height: 35px;
+
+.nav-item:last-child {
+  margin-right: 0;
 }
-.exit{
-  position: relative;
-  background-color: transparent;
-  left: 76%;
-  top: -20%;
-  width: 40px;
-  height: 40px;
-  border: none;
+
+.nav-item a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
-.services{
-  position: relative;
-  top: -2px;
-  left: 55%;
-  width: 30px;
-}
-.info{
-  position: relative;
-  top: -2px;
-  left: 51%;
-  width: 30px;
-}
-.contact{
-  position: relative;
-  top: -2px;
-  left: 53%;
-  width: 30px;
-}
-.logoSide{
-  position: relative;
-  top: -2px;
-  left: 65%;
-  width: 30px;
-  transition: left 0.3s ease-in-out;
+
+.nav-item a:hover {
+  color: #580ef6;
 }
