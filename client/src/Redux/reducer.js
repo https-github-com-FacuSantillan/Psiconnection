@@ -1,8 +1,10 @@
 import { SET_FILTER, SET_ORDERS } from "./actions";
 import store from "./store";
 const initialstate = {
+  //Todos los psicologos
   allPshychologists: [
     {
+      id: 1,
       name: "Alice",
       age: 35,
       gender: "female",
@@ -13,6 +15,7 @@ const initialstate = {
       especializacion: "terapia familiar",
     },
     {
+      id: 2,
       name: "Bob",
       age: 40,
       gender: "male",
@@ -23,6 +26,7 @@ const initialstate = {
 
     },
     {
+      id: 3,
       name: "Carol",
       age: 28,
       gender: "female",
@@ -34,6 +38,7 @@ const initialstate = {
 
     },
     {
+      id: 4,
       name: "David",
       age: 45,
       gender: "male",
@@ -45,6 +50,7 @@ const initialstate = {
 
     },
     {
+      id: 5,
       name: "Eva",
       age: 32,
       gender: "female",
@@ -56,6 +62,7 @@ const initialstate = {
 
     },
     {
+      id: 6,
       name: "Frank",
       age: 50,
       gender: "male",
@@ -66,6 +73,7 @@ const initialstate = {
 
     },
     {
+      id: 7,
       name: "Grace",
       age: 29,
       gender: "female",
@@ -77,6 +85,7 @@ const initialstate = {
 
     },
     {
+      id: 8,
       name: "Henry",
       age: 38,
       gender: "male",
@@ -88,8 +97,10 @@ const initialstate = {
 
     },
   ],
+  //Psicolos que se renderizan
   psychologists: [
     {
+      id: 1,
       name: "Alice",
       age: 35,
       gender: "female",
@@ -100,6 +111,7 @@ const initialstate = {
       especializacion: "terapia familiar",
     },
     {
+      id: 2,
       name: "Bob",
       age: 40,
       gender: "male",
@@ -110,6 +122,7 @@ const initialstate = {
 
     },
     {
+      id: 3,
       name: "Carol",
       age: 28,
       gender: "female",
@@ -121,6 +134,7 @@ const initialstate = {
 
     },
     {
+      id: 4,
       name: "David",
       age: 45,
       gender: "male",
@@ -132,6 +146,7 @@ const initialstate = {
 
     },
     {
+      id: 5,
       name: "Eva",
       age: 32,
       gender: "female",
@@ -143,6 +158,7 @@ const initialstate = {
 
     },
     {
+      id: 6,
       name: "Frank",
       age: 50,
       gender: "male",
@@ -153,6 +169,7 @@ const initialstate = {
 
     },
     {
+      id: 7,
       name: "Grace",
       age: 29,
       gender: "female",
@@ -164,6 +181,7 @@ const initialstate = {
 
     },
     {
+      id: 8,
       name: "Henry",
       age: 38,
       gender: "male",
@@ -175,6 +193,7 @@ const initialstate = {
 
     },
   ],
+
   psychoOrdered: []
 }
 
@@ -219,36 +238,36 @@ const rootReducer = (state = initialstate, action) => {
           psyOrdered.sort((a, b) => b.precio - a.precio);
           allOrdered.sort((a, b) => b.precio - a.precio);
           break;
-          case "desPu":
-            psyOrdered.sort((a, b) => {
-              if (a.score === undefined && b.score === undefined) {
-                return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
-              } else if (a.score === undefined) {
-                return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
-              } else if (b.score === undefined) {
-                return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
-              } else {
-                return b.score - a.score; // Ambos elementos tienen puntuación, orden normal
-              }
-            });
-            allOrdered.sort((a, b) => {
-              if (a.score === undefined && b.score === undefined) {
-                return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
-              } else if (a.score === undefined) {
-                return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
-              } else if (b.score === undefined) {
-                return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
-              } else {
-                return b.score - a.score; // Ambos elementos tienen puntuación, orden normal
-              }
-            });
-            break;
-       
-          
-          
-          
-          
-          
+        case "desPu":
+          psyOrdered.sort((a, b) => {
+            if (a.score === undefined && b.score === undefined) {
+              return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
+            } else if (a.score === undefined) {
+              return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
+            } else if (b.score === undefined) {
+              return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
+            } else {
+              return b.score - a.score; // Ambos elementos tienen puntuación, orden normal
+            }
+          });
+          allOrdered.sort((a, b) => {
+            if (a.score === undefined && b.score === undefined) {
+              return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
+            } else if (a.score === undefined) {
+              return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
+            } else if (b.score === undefined) {
+              return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
+            } else {
+              return b.score - a.score; // Ambos elementos tienen puntuación, orden normal
+            }
+          });
+          break;
+
+
+
+
+
+
         case "alf":
           psyOrdered.sort((a, b) => a.name.localeCompare(b.name));
           allOrdered.sort((a, b) => a.name.localeCompare(b.name));
