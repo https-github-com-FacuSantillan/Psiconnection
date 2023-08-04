@@ -1,7 +1,7 @@
 
 const { Router } = require('express');
 const upload = require('../utils/upload');
-const { Router } = require("express");
+
 
 //Controladores
 const {
@@ -33,11 +33,10 @@ psicologosRoutes.delete("/delete", checkDataDelete, deleteController);
 // ruta tipo post http://localhost:3001/psiconection/registerPsicologo --- Psicologo
 psicologosRoutes.post("/registerPsicologo", registerHandler);
 
-
+// ruta tipo put subir foto ruta http://localhost:3001/psiconection/uploadFoto/"id del psicologo"
 psicologosRoutes.put('/uploadFoto/:id',upload.single('foto'), subirFoto);
-//! login
-//ruta tipo post http://localhost:3001/psiconection/login
-psicologosRoutes.post("/login");
+
+
 
 
 module.exports = psicologosRoutes;
