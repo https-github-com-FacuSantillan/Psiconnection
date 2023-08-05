@@ -10,8 +10,8 @@ const Filters = () => {
     const dispatch = useDispatch();
 
     const [filters, setFilters] = useState({
-        gender: "all",
-        country: "all",
+        genero: "all",
+        pais: "all",
         horario: "all",
         especializacion: "all",
     });
@@ -72,7 +72,7 @@ const Filters = () => {
             <div className={style.selectContainer}>
                 <select
                     className={style.select}
-                    name="gender"
+                    name="genero"
                     value={filters.gender}
                     onChange={handleFilterChange}
                 >
@@ -86,7 +86,7 @@ const Filters = () => {
             <div className={style.selectContainer}>
                 <select
                     className={style.select}
-                    name="country"
+                    name="pais"
                     value={filters.country}
                     onChange={handleFilterChange}
                 >

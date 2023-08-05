@@ -2,7 +2,7 @@
 .navbar {
   background-color: #2b4c7e;
   color: #fff;
-  height: 60px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,6 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 2px solid #606D80; /* Agregamos una línea de color #580ef6 y grosor de 2px en la parte inferior */
+  overflow-x: hidden;
 }
 
 .navbar-container {
