@@ -1,5 +1,5 @@
-.title{
-    color: black;
-    justify-content: center;
-    display: flex;
+/* cards module.css */
+.titulo{
+    font-size: 18px;
+    font-weight: bold;
 }

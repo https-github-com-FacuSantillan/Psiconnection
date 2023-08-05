@@ -21,6 +21,7 @@ const CardsContainer = () => {
                 imagen = {psicologo.imagen}
                 valoracion = {psicologo.valoracion}
                 tarifa = {psicologo.tarifa}
+                pais = {psicologo.pais}
                 />
             })}
         </div>
