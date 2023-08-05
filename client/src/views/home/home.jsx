@@ -17,15 +17,11 @@ export default function Home() {
           </div>
   
           {/* Columna para los contenedores de tarjetas */}
-          <div className="col-md-10">
+          <div className={`col-md-10 ${style.container}`}>
             <CardsContainer />
           </div>
         </div>
-        <div className="row">
-          <div className="col">
-            <Sidebar />
-          </div>
-        </div>
+        
       </div>
 
           );

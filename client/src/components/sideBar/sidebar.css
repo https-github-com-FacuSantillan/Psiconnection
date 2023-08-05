@@ -10,9 +10,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #606D80; /* Agregamos una línea de color #580ef6 y grosor de 2px en la parte inferior */
-  overflow-x: hidden;
-}
+  border-bottom: 2px solid #606D80; /* Color más vibrante */
+  z-index: 9999;}
 
 .navbar-container {
   width: 100%;
@@ -24,18 +23,20 @@
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Tamaño ligeramente más grande */
   text-decoration: none;
   color: #fff;
+  font-weight: bold; /* Añadimos negrita para destacar el logo */
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
+  margin-bottom: 0; /* Eliminamos el margen inferior */
 }
 
 .nav-item {
-  margin-right: 20px;
+  margin-right: 25px; /* Un poco más de espacio entre los ítems */
 }
 
 .nav-item:last-child {
@@ -45,10 +46,11 @@
 .nav-item a {
   text-decoration: none;
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem; /* Tamaño ligeramente más grande */
   transition: color 0.3s ease;
 }
 
 .nav-item a:hover {
-  color: #580ef6;
+  color: #606D80; /* Color más vibrante al hacer hover */
+  transform: translateY(-2px); /* Efecto de elevación */
 }
