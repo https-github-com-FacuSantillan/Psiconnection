@@ -7,13 +7,13 @@ export default function Sidebar() {
   return (
 <nav className="navbar">
       <div className="navbar-container">
-        <a href="/" className="navbar-logo">logo</a>
+        <a href="/home" className="navbar-logo">logo</a>
         <ul className="nav-menu">
           <li className="nav-item"><a href="/home">Inicio</a></li>
-          <li className="nav-item"><a href="/detail">Perfil</a></li>
-          <li className="nav-item"><a href="/servicios">Servicios</a></li>
-          <li className="nav-item"><a href="/contacto">Backout</a></li>
-        </ul>
+          {/* <li className="nav-item"><a href="/detail">Perfil</a></li> */}
+          <li className="nav-item"><a href="/nosotros">About us</a></li>
+          <li className="nav-item"><a href="/form">Sign up</a></li>
+        </ul> 
       </div>
     </nav>
   );

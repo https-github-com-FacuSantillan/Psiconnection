@@ -21,8 +21,8 @@ const Orders = () => {
             <div className={style.selectContainer}>
             <select className={style.select} value={order} onChange={handleOrder}>
                 <option value= 'alf'>Nombre</option>
-                <option value= "ascPr">Mayor precio</option>
-                <option value= "desPr">Menor precio</option>
+                <option value= "ascPr">Mayor tarifa</option>
+                <option value= "desPr">Menor tarifa</option>
                 <option value= "desPu">Mayor puntuación</option>
             </select>
         </div>
