@@ -12,13 +12,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Landing() {
     return (
         <div className={s.landing}>
-            <div className={s.row1}>
-                <img src={logo} alt="" />
-            </div>
-            <div className={s.row2}>
+            <div className={s.col1}>
                 <Carrusul></Carrusul>
             </div> 
-            <div className={s.row3}>
+            <div className={s.col2}>
+                <h1 className={s.title_landing}>¡Bienevenido a Psicconection!.</h1>
+                <p className={s.description_landing}>
+                    Conéctate con psicólogos de alta calidad y servicio excepcional. Charla, consulta y cuida tu bienestar mental aquí
+                </p>
+
                 <Link to="/home">
                     <button>GET IN</button>
                 </Link>
