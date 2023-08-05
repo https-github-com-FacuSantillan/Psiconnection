@@ -5,6 +5,8 @@ import s from "../landing/landing.module.css"
 //importamos componentes 
 import Carrusul from "../../components/carrusel/Carrusel"
 import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 export default function Landing() {

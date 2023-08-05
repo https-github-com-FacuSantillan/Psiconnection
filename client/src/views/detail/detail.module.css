@@ -7,23 +7,24 @@
     #1f1f20
 */
 .detail_conteiner{
+    margin-top: 40px;
     background-color:#DCE0E6;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 .detail{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     height: 100%;
     width: 80%;
     gap: 20px;
 }
 .view_psico{
-    display: grid;
-    grid-template-rows: 5fr 3fr 6fr ;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     background-color: #ffff;
     height: 100%;
@@ -31,7 +32,6 @@
     border-radius:20px ;
 }
 .foto_conteiner{
-
     height: 100%;
     width: 50%;
 }
@@ -111,25 +111,23 @@
 }
 
 .turno_conteiner{
+    position: fixed;
     padding: 20px;
     background-color: #ffff;
-    height: 50%;
-    width: 40%;
+    height: 500px;
+    left: 60%;
+    width: 500px;
     border-radius: 20px;
 }
 
 .row1{
     display: flex;
-    grid-row: 1;
 }
 .row2{
-    grid-row: 2;
     margin-top: 10px;
     font-size: 20px;
     color: gray;
 }
 .row3{
-    margin-top: 10px;
-    grid-row: 3;
-}
+    margin-top: 10px;}
 
