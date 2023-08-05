@@ -3,8 +3,7 @@
   .container {
     position: fixed; /* Utilizamos position: fixed para posicionar el contenedor */
     top: 9%;
-    right: 0; /* El contenedor se ubicará en el extremo derecho de la página */
-    width: 320px;
+      width: 320px;
     height: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -29,7 +28,7 @@
       margin-bottom: 30px;
     }
     .select {
-      width: 130px;
+      width: 158px;
       height: 40px;
       padding: 8px;
       border: none; /* Eliminamos el borde */
@@ -41,7 +40,7 @@
       cursor: pointer;
       text-shadow: none; /* Eliminamos el sombreado */
       box-shadow: none; /* Eliminamos el sombreado */
-      border-bottom: 2px solid #580ef6; 
+      border-bottom: 2px solid #606D80; 
 
       
     }
@@ -72,7 +71,7 @@
       border: none;
       border-radius: 5px;
       background-color: white;
-      color: #580ef6;
+      color: #606D80;
       font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s; /* Agregamos transiciones para una animación suave en el hover */

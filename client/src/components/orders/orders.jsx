@@ -15,9 +15,10 @@ const Orders = () => {
     useEffect(() => {
         dispatch(setOrders(order))
     }, [])
-    return(
-        <div className={style.selectContainer}>
+    return (
+        <div>
             <label className={style.label}>Ordenar por: </label>
+            <div className={style.selectContainer}>
             <select className={style.select} value={order} onChange={handleOrder}>
                 <option value= 'alf'>Nombre</option>
                 <option value= "ascPr">Mayor precio</option>
@@ -25,6 +26,8 @@ const Orders = () => {
                 <option value= "desPu">Mayor puntuación</option>
             </select>
         </div>
+        </div>
+       
     )
 }
 
