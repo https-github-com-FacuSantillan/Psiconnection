@@ -12,6 +12,7 @@ import { useState, useEffect } from "react";
 
 //importamos views:
 import Landing from './views/landing/landing'
+import Form from './views/form/form'
 
 //importmos components:
 
@@ -22,10 +23,10 @@ function App() {
   return (
     <div>
       <Routes>
-        {pathname !== '/' && <SideBar/>}
+        {pathname !== '/' && <SideBar/>} 
         <Route path='/' element={<Landing />}></Route>
         <Route path='/home' element={<Home />} />
-
+        <Route path='/form' element={<Form />} />
 
       </Routes>
     </div>
