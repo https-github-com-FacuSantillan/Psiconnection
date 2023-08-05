@@ -11,7 +11,8 @@
   justify-content: center;
   align-items: center;
   border-bottom: 2px solid #606D80; /* Color más vibrante */
-  z-index: 9999;}
+  z-index: 9999;
+}
 
 .navbar-container {
   width: 100%;
