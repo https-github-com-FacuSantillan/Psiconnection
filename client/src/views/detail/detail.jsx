@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 import s from "./detail.module.css"
-//importamos los hooks para el estado global 
+//importamos los hooks para el estado global dd
 import { useSelector } from "react-redux"
 
 const Detail = () => {
