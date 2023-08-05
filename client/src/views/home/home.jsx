@@ -1,15 +1,29 @@
-import './home.css'
-import Cards from '../../components/cards/cards'
-import Filters from "../../components/filters/filters"
+import Cards from '../../components/cards/Card';
+import Filters from "../../components/filters/filters";
+import Orders from "../../components/orders/orders";
+import CardsContainer from '../../components/CardsContainer/CardsContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Sidebar from '../../components/sideBar/sideBar';
+import style from "./home.module.css"
+import Pagination from '../../components/Pagination/Pagination';
 
-//COOMENTARIOOOOOOOOOOOOOO
-//dasjdashaskj
 export default function Home() {
     return (
-        <div> 
-            <Filters/>
-            <Cards/>
-        </div>
-    )
+    
+        <div>
+        
+          {/* Columna para los filtros */}
+            <Filters />
+        
+          
+          {/* Columna para los contenedores de tarjetas */}
 
-}
+            <Pagination/>
+
+          
+        
+      </div>
+
+          );
+  }
+  

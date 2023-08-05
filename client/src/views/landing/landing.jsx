@@ -1,34 +1,29 @@
 //importamos el logo
-import logo from "../../Images/Screenshot_4.jpg"
-import image1 from "../../Images/frases-carl-rogers-psicologia.jpg"
-import image2 from "../../Images/frases-psicologia.jpg"
-import image3 from "../../Images/psicologos-realmente-hacen-min-1024x576.jpg"
-//utilizamos css pura para el carrusel 
+import logo from "../../Images/Screenshot_7.jpg"
+//importamos el estilo 
 import s from "../landing/landing.module.css"
-///Este comentarioAAAAA
+//importamos componentes 
+import Carrusul from "../../components/carrusel/Carrusel"
+import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 export default function Landing() {
     return (
-        <div className="flex h-full w-full bg-[#fcfcfc]">
-            <div className=" flex justify-center items-center h-screen w-3/6 bg-[#580EF6]">
-                {/* aca utilizo css puro con comodidad */}
-                <div className={s.carrusel}>
-                    <div className={s.image_conteiner}>
-                        <img  src={image1} alt="image1" />
-                        <img  src={image2} alt="image2" />
-                        <img  src={image3} alt="image3" />
-                    </div>
-                    <ul className={s.puntos}>
-                        <li className={s.punto}></li>
-                        <li className={s.punto}></li>
-                    </ul>
-                </div>
+        <div className={s.landing}>
+            <div className={s.col1}>
+                <Carrusul></Carrusul>
+            </div> 
+            <div className={s.col2}>
+                <h1 className={s.title_landing}>¡Bienevenido a Psicconection!.</h1>
+                <p className={s.description_landing}>
+                    Conéctate con psicólogos de alta calidad y servicio excepcional. Charla, consulta y cuida tu bienestar mental aquí
+                </p>
 
-
-
-            </div>
-            <div className=" flex items-start justify-center h-screen w-3/6 mt-7 bg-[#fcfcfc]"  >
-                <img src={logo} alt="logo" />
+                <Link to="/home">
+                    <button>GET IN</button>
+                </Link>
             </div>
         </div>
     )

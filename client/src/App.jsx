@@ -13,24 +13,31 @@ import { useState, useEffect } from "react";
 //importamos views:
 import Landing from './views/landing/landing'
 import Form from './views/form/form'
+import Detail from './views/detail/detail'
+import Nosotros from './views/nosotros/nosotros'
 
 //importmos components:
 
+
 //comentario
 function App() {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <div>
+      {pathname !== '/' && <SideBar/>}
       <Routes>
-        {pathname !== '/' && <SideBar/>} 
-        <Route path='/' element={<Landing />}></Route>
-        <Route path='/home' element={<Home />} />
         <Route path='/form' element={<Form />} />
+
+        <Route path='/' element={<Landing />} />
+        <Route path='/home' element={<Home />} /> 
+        <Route path='/nosotros' element={<Nosotros/>}></Route>
+        <Route path="/detail/:detailID" element={<Detail/>}></Route>
 
       </Routes>
     </div>
   )
 }
-
 export default App
+
+//prueba

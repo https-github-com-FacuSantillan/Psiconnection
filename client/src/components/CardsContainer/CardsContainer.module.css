@@ -1,0 +1,13 @@
+/* cardsContainer */
+body {
+    background-color: #dce0e6; /* Color de fondo deseado para toda la página */
+    margin: 0; /* Eliminamos el margen predeterminado del body */
+  }
+  
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  background-color: #dce0e6;
+  padding-top: 1em;
+}
