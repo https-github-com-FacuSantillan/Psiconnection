@@ -12,8 +12,10 @@ import { useState, useEffect } from "react";
 
 //importamos views:
 import Landing from './views/landing/landing'
+import Form from './views/form/form'
 import Detail from './views/detail/detail'
 import Nosotros from './views/nosotros/nosotros'
+
 //importmos components:
 
 
@@ -25,10 +27,13 @@ function App() {
     <div>
       {pathname !== '/' && <SideBar/>}
       <Routes>
+        <Route path='/form' element={<Form />} />
+
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} /> 
         <Route path='/nosotros' element={<Nosotros/>}></Route>
         <Route path="/detail/:detailID" element={<Detail/>}></Route>
+
       </Routes>
     </div>
   )
