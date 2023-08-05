@@ -31,6 +31,8 @@ const psicologosRoutes = Router();
 psicologosRoutes.get("/", getPsicologosHandler);
 
 //Ruta de búsqueda por id
+//TODO: ejemplo de midleware auth y permisos por roll
+// psicologosRoutes.get("/:id",checkAuth, checkRollAuth(['usuario']), getDetailHandler);
 psicologosRoutes.get("/:id", getDetailHandler);
 
 //Modificar información existente del psico
