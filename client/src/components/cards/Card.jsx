@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 
 export default function Cards(props) {
   return (
-    <div className="card" style={{ width: '18rem', marginBottom: "20px"}}>
-      <Link to={`/detail/${props.id}`}>
+    <Link to={`/detail/${props.id}`}>
+    <div className={`card ${s.carta}`}>
+      
       <img className="card-img-top" src={props.imagen} alt="Card image cap" style={{ height: '20rem'}}/>
 
-      </Link>
+     
       <div className="card-body">
         <h3 className={s.titulo}>{props.nombre}</h3>
       </div>
@@ -19,5 +20,6 @@ export default function Cards(props) {
     <li className="list-group-item">${props.tarifa}</li>
   </ul>
     </div>
+    </Link>
   );
 }
