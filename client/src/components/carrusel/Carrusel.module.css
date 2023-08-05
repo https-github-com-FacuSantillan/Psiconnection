@@ -1,4 +1,12 @@
+/* 
+    #dce0e6
+    #606d80
+    #567ebb
+    #2b4c7e
+    #1f1f20
+*/
 .carrusel{
+    position: relative;
     display: flex;
     flex-direction: column ;
     justify-content: end;
@@ -6,8 +14,7 @@
     height: 60vh;
     max-width: 120em;
     border-radius: 10px;
-    background-color: #fcfcfc;
-    margin-top: 30px ;
+    background-color: #dce0e6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),  4px 6px rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
@@ -22,6 +29,27 @@
     transform: translate(0%);
 
 }
+.back{
+    font-size: 70px;
+    position: absolute;
+    top: 237px;
+    left: 20px;
+    color: #fcfcfc;
+    cursor: pointer;
+    z-index: 500;
+
+}
+.next{
+    font-size: 70px;
+    position: absolute;
+    top: 230px;
+    left: 843px;
+    color: #fcfcfc;
+    cursor: pointer;
+    z-index: 500;
+
+
+}
 .image_conteiner img{
     height: 100%;
     width: calc(100% / 3);
@@ -32,7 +60,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: #fcfcfc;
+    background-color: #dce0e6;
     padding: 1em;
     border-radius: 10px;
     box-shadow: #fcfcfc;
@@ -40,15 +68,16 @@
 .punto{
     width: 1em;
     height: 1em;
-    background-color: #3d3a50;
+    background-color: #606d80;
     margin-left: 20px;
     border-radius: 100%;
+    cursor: pointer;
 
 }
 .puntoSelect{
     width: 1em;
     height: 1em;
-    background-color: #580EF6;
+    background-color: #1f1f20;
     margin-left: 20px;
     border-radius: 100%;
 }
