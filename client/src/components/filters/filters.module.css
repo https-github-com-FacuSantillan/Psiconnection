@@ -3,15 +3,15 @@
   .container {
     position: fixed; /* Utilizamos position: fixed para posicionar el contenedor */
     top: 9%;
-      width: 320px;
     height: 100%;
+    
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-around;
       flex-direction: column; /* Cambio para colocar los filtros en columna */
       background-color: #2b4c7e;
-      padding: 50px;
+      padding: 70px;
       gap: 0px; /* Añadimos un espacio de 7px entre los elementos */
     }
     
@@ -75,6 +75,7 @@
       font-size: 16px;
       cursor: pointer;
       transition: background-color 0.3s, color 0.3s; /* Agregamos transiciones para una animación suave en el hover */
+      margin-bottom: 40px;
 
     }
     .btn:hover {

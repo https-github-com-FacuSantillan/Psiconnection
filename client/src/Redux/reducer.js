@@ -257,25 +257,25 @@ const rootReducer = (state = initialstate, action) => {
           break;
         case "desPu":
           psyOrdered.sort((a, b) => {
-            if (a.score === undefined && b.score === undefined) {
+            if (a.valoracion === undefined && b.valoracion === undefined) {
               return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
-            } else if (a.score === undefined) {
+            } else if (a.valoracion === undefined) {
               return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
-            } else if (b.score === undefined) {
+            } else if (b.valoracion === undefined) {
               return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
             } else {
-              return b.score - a.score; // Ambos elementos tienen puntuación, orden normal
+              return b.valoracion - a.valoracion; // Ambos elementos tienen puntuación, orden normal
             }
           });
           allOrdered.sort((a, b) => {
-            if (a.score === undefined && b.score === undefined) {
+            if (a.valoracion === undefined && b.valoracion === undefined) {
               return 0; // Ambos elementos no tienen puntuación, no hay cambio en el orden
-            } else if (a.score === undefined) {
+            } else if (a.valoracion === undefined) {
               return 1; // El elemento 'a' no tiene puntuación, lo colocamos al final
-            } else if (b.score === undefined) {
+            } else if (b.valoracion === undefined) {
               return -1; // El elemento 'b' no tiene puntuación, lo colocamos al final
             } else {
-              return b.score - a.score; // Ambos elementos tienen puntuación, orden normal
+              return b.valoracion - a.valoracion; // Ambos elementos tienen puntuación, orden normal
             }
           });
           break;
