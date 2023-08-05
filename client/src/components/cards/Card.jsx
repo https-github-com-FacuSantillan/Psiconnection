@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 export default function Cards(props) {
   return (
     <div className="card" style={{ width: '18rem', marginBottom: "20px"}}>
-      <Link to={`/detail${props.id}`}>
+      <Link to={`/detail/${props.id}`}>
       <img className="card-img-top" src={props.imagen} alt="Card image cap" style={{ height: '20rem'}}/>
 
       </Link>
