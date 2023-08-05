@@ -12,6 +12,7 @@
       flex-direction: column; /* Cambio para colocar los filtros en columna */
       background-color: #2b4c7e;
       padding: 70px;
+      left: 0;
       gap: 0px; /* Añadimos un espacio de 7px entre los elementos */
     }
     

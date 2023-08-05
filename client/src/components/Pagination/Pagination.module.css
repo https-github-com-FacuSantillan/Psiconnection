@@ -1,0 +1,39 @@
+.btn {
+    background-color: #567ebb;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #2b4c7e;
+  }
+.pagination {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna vertical */
+    align-items: center; /* Centra horizontalmente los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    margin: 120px 40px 40px 389px; /* Ajusta el margen izquierdo para moverlo hacia la derecha */
+
+}
+  
+  .handlerCont {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones y el texto */
+    margin-right: 80px;
+  }
+
+  .handlerCont button {
+    margin-right: 5px; /* Ajusta el margen entre los botones */
+  }
+  
+  .handlerCont h5 {
+    margin-left: 5px; /* Ajusta el margen entre los botones y el número de página */
+  }
+
+ 
+  
