@@ -34,10 +34,9 @@ module.exports = (sequelize) => {
             allowNull:false,
             unique: true
         },
-        contraseñaHash: {
+        contraseña: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true
         },
         telefono: {
             type: DataTypes.STRING,
@@ -46,9 +45,6 @@ module.exports = (sequelize) => {
         foto: {
             type: DataTypes.STRING,
             allowNull: true,
-            validate: {
-                isUrl: true
-              }
         },
         fecha_registro: {
             type: DataTypes.DATE,
@@ -56,7 +52,12 @@ module.exports = (sequelize) => {
         },
         estado_cuenta: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: true,
+            defaultValue:"activo"
+        },
+        roll: {
+            type: DataTypes.STRING,
+            defaultValue: 'usuario'
         }
     },{
         timestamps: false,
