@@ -7,7 +7,7 @@ const {
   } = require("../controllers/psicologosController.js");
 
   const cloudinary = require('../utils/cloudinary.js');
-   
+ 
   
   //Handler de la ruta get que trae a todos los psicologos
   const getPsicologosHandler = async (req, res) => {
@@ -23,6 +23,7 @@ const {
     } catch (error) {
       res.status(400).json({ error: error.message });
     }
+
   };
   
   const getDetailHandler = async (req, res) => {
@@ -34,11 +35,12 @@ const {
       res.status(400).json({ error: error.message });
   
     }
+
 }   
     
     
     // manejador de registro psicologo http://localhost:3001/psiconection/registerPsicologo --- Psicologo
-    const registerHandler = async (req, res) => {
+    const registerHandler = async (req, res, next) => {
     
         const {
             nombre,
@@ -56,10 +58,9 @@ const {
             whatsapp_url,
             telefono,
             descripcion,
-            fecha_registro
+            fecha_registro,
         } = req.body;
-    
-    
+
         try {
          //! validaciones
             if (!nombre) return res.status(403).json({ error: 'nombre vacio' });
@@ -133,7 +134,10 @@ const {
         } catch (error) {
             res.status(400).json({ error: error.message })
         }
+  
     }
+
+    
     
     
     //Handler de la ruta put para corroborar que al menos llego un dato para actualizar

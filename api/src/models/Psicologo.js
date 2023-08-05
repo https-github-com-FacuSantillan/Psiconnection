@@ -87,6 +87,10 @@ module.exports = (sequelize) => {
             type: DataTypes.DATE,
             allowNull: false
         },
+        roll: {
+            type: DataTypes.STRING,
+            defaultValue: "psicologo"
+        }
     },{
         timestamps: false,
         freezeTableName: true

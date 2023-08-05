@@ -3,6 +3,12 @@ const { Router } = require('express');
 const upload = require('../utils/upload');
 
 
+
+//midlewares //TODO: AUTHENTICATOR 
+const checkAuth  = require('../middlewares/auth.js');
+const checkRollAuth = require('../middlewares/rollAuth.js');
+
+
 //Controladores
 const {
   putController,
@@ -38,7 +44,7 @@ psicologosRoutes.delete("/delete", checkDataDelete, deleteController);
 psicologosRoutes.post("/registerPsicologo", registerHandler);
 
 // ruta tipo put subir foto ruta http://localhost:3001/psiconection/uploadFoto/"id del psicologo"
-psicologosRoutes.put('/uploadFoto/:id',upload.single('foto'), subirFoto);
+psicologosRoutes.put('/uploadFoto/:id', upload.single('foto'), subirFoto);
 
 
 
