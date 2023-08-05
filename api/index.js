@@ -7,7 +7,7 @@ const { conn} = require('./src/db.js');
 
 //Comentario de ejemplooooooooooo
 
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: true }).then(() => {
   server.listen(PORT, () => {
     console.log("listening at port ", PORT);
   });

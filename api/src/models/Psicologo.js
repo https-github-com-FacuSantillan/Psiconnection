@@ -27,8 +27,7 @@ module.exports = (sequelize) => {
         },
         contraseña: {
             type: DataTypes.STRING,
-            allowNull: false,
-            unique: true
+            allowNull: false
         },
         pais: {
             type: DataTypes.STRING,
@@ -87,6 +86,10 @@ module.exports = (sequelize) => {
             type: DataTypes.DATE,
             allowNull: false
         },
+        roll: {
+            type: DataTypes.STRING,
+            defaultValue: "psicologo"
+        }
     },{
         timestamps: false,
         freezeTableName: true
