@@ -1,5 +1,7 @@
-const { createUserController } = require('../controllers/userControllers.js');
+const { createUserController, uploadUserPhoto } = require('../controllers/userControllers.js');
 const obtenerFechaActual = require('../helpers/getFecha.js');
+const cloudinary = require('../utils/cloudinary.js');
+
 
 const userCreateHandler = async (req,res) => {
     const {nombre, apellido, fecha_nacimiento, pais, genero, email, contraseña, telefono} = req.body
@@ -28,10 +30,38 @@ const userCreateHandler = async (req,res) => {
 }
 
 
+const subirFotoUser = async (req, res) => {
+    
+        function getUrlUserImage() {
+            return new Promise((resolve, reject) => {
+                cloudinary.uploader.upload(req.file, function (err, result) {
+                    if (err) {
+                        reject(new Error("No se pudo subir la imagen"));
+                    } else {
+                        const data = result.url;
+                        resolve(data);
+                    }
+                })
+            })
+        }
+    try {
+    
+        const { id } = req.params;
+        const fotoUserURL = await getUrlUserImage();
+        console.log(fotoUserURL);
+        const updatedUserPhoto = await uploadUserPhoto({id, fotoUserURL});
+         res.status(200).json(updatedUserPhoto);
+    } catch (error) {
+        return  res.status(400).json({error:error.message});
+    }
+}
+
+
 
 module.exports = {
-    userCreateHandler
-}
+    userCreateHandler,
+    subirFotoUser
+};
 
 
 
