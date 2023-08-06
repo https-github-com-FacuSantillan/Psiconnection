@@ -8,31 +8,23 @@
   border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  border-radius: 50%;
 }
 
 .btn:hover {
   background-color: #2b4c7e;
 }
 
-
-.pagination {
-    position: absolute; /* Agregar posición absoluta para superponer el componente */
-    top: 22%; /* Ajustar la posición vertical según sea necesario */
-    left: 60%; /* Centrar horizontalmente el componente */
-    transform: translateX(-50%); /* Centrar horizontalmente el componente */
+.handlerCont {
+    width: 30px;
+    height: 30px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3%;
-    z-index: 1; /* Asegurar que el componente esté por encima del contenido */
-  }
-  
-  .handlerCont {
-    display: flex;
+    flex-direction: row;
     gap: 20px;
+    font-size: 14px;
   }
   
-  .pageIndicator {
+.pageIndicator {
     width: 30px;
     height: 30px;
     background-color: #567ebb;
