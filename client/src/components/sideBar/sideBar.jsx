@@ -7,9 +7,9 @@ export default function Sidebar() {
   return (
 <nav className="navbar">
       <div className="navbar-container">
-        <a href="/home" className="navbar-logo">logo</a>
+        <a href="/home" className="navbar-logo">Psiconnection</a>
         <ul className="nav-menu">
-          <li className="nav-item"><a href="/home">Inicio</a></li>
+          <li className="nav-item"><a href="/home">Home</a></li>
           {/* <li className="nav-item"><a href="/detail">Perfil</a></li> */}
           <li className="nav-item"><a href="/nosotros">About us</a></li>
           <li className="nav-item"><a href="/form">Sign up</a></li>

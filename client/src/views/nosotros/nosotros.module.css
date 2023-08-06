@@ -1,11 +1,12 @@
 .container {
-    width: 100%;
+    width: 70%;
     max-width: 1200px;
-    margin:  45% auto 0; /* Ajustar el margen superior y el centrado horizontal */
+    margin:  50% auto 0; /* Ajustar el margen superior y el centrado horizontal */
     padding: 20px;
     display: flex; /* Aplicamos flexbox al contenedor */
     flex-direction: column; /* Alineamos los elementos en una columna vertical */
     justify-content: center; /* Centramos verticalmente los elementos */
+    
   }
 
 
@@ -45,12 +46,23 @@
     align-items: center;
   }
   
-  .teamMember img {
+  .imagen {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
   }
+
+  .linkedinLogo{
+    width: 20px;
+    height: 20px;
+  }
   
+  .title{
+    font-size: 44px;
+    color: #2b4c7e;
+    margin-bottom: 80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
   
   
