@@ -28,7 +28,6 @@ function App() {
       {pathname !== '/' && <SideBar/>}
       <Routes>
         <Route path='/form' element={<Form />} />
-
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} /> 
         <Route path='/nosotros' element={<Nosotros/>}></Route>

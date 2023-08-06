@@ -164,7 +164,7 @@ const Form = () => {
               <input type="text" name="pais" value={formData.pais} onChange={handleChange} required />
 
               <label>Género:</label>
-              <select id="text" name="genero" value={formData.genero} onChange={handleChange} required>
+              <select type="text" name="genero" value={formData.genero} onChange={handleChange} required>
                 <option value="">Seleccione...</option>
                 <option value="masculino">Masculino</option>
                 <option value="femenino">Femenino</option>
