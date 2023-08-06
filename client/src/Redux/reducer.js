@@ -1,4 +1,4 @@
-import { SET_FILTER, SET_ORDERS } from "./actions";
+import { SET_FILTER, SET_ORDERS, GET_PSICOLOGOS } from "./actions";
 import store from "./store";
 const initialstate = {
   //Todos los psicologos
@@ -242,6 +242,7 @@ const rootReducer = (state = initialstate, action) => {
       return { ...state, psychologists: psyFiltered }
 
     case SET_ORDERS:
+
       const order = action.payload;
       let psyOrdered = [...state.psychologists];
       let allOrdered = [...state.allPshychologists];
@@ -320,6 +321,9 @@ const rootReducer = (state = initialstate, action) => {
       console.log(psyOrdered);
 
       return { ...state, psychologists: psyOrdered, psychoOrdered: allOrdered };
+    case GET_PSICOLOGOS: 
+      return {...state, psychologists: action.payload, allPshychologists:action.payload}
+      
     default: return state
   }
 

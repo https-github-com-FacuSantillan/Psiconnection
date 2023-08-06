@@ -10,10 +10,17 @@ export default function Home() {
   const piscologos = useSelector(state => state.psychologists);
   const [currentPage, setCurrentPage] = useState(0);
 
+  useEffect(() =>{
+    if(piscologos.length === 0){
+      //dispatch(getPsicologos())
+    }
+  }, [piscologos]);
+
   const prevHandler = () => {
+    const elements = filteredRecipes.length > 0 ? filteredRecipes.length : recipes.length;
+
     setCurrentPage(prevPage => Math.max(prevPage - 1, 0));
   }
-
   const nextHandler = () => {
     setCurrentPage(prevPage => Math.min(prevPage + 1, Math.ceil(piscologos.length / ITEMS_PER_PAGE) - 1));
   }
@@ -25,11 +32,7 @@ export default function Home() {
   // Filtra las tarjetas a mostrar en la página actual
   const currentItems = piscologos.slice(firstIndex, lastIndex);
 
-  useEffect(() =>{
-    if(piscologos.length === 0){
-      //dispatch(getPsicologos())
-    }
-  }, [piscologos]);
+  
 
   return (
     <div className={style.home}>
