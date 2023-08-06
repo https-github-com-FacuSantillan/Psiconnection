@@ -38,6 +38,18 @@ const createUserController = async ({nombre, apellido, fecha_nacimiento, pais, g
 };
 
 
+const uploadUserPhoto = async ({id, fotoUserURL}) => {
+    const updateFoto = await Usuario.update({ foto: fotoUserURL }, {
+        where: {
+            id: id
+        }
+    })
+
+    return updateFoto;
+}
+
+
 module.exports = {
-    createUserController
+    createUserController,
+    uploadUserPhoto
 }
