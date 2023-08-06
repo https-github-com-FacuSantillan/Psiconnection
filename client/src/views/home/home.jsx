@@ -1,44 +1,42 @@
-import Cards from '../../components/cards/Card';
-import Filters from "../../components/filters/filters";
-import Orders from "../../components/orders/orders";
-import CardsContainer from '../../components/CardsContainer/CardsContainer';
-import Sidebar from '../../components/sideBar/sideBar';
-import style from "./home.module.css"
-import Pagination from '../../components/Pagination/Pagination';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-
+import Filters from "../../components/filters/filters";
+import Pagination from '../../components/Pagination/Pagination';
+import CardsContainer from '../../components/CardsContainer/CardsContainer';
 export default function Home() {
-  const ITEMS_PER_PAGE = 9;
-  const [items, setItems] = useState([])
-  const [currentPage, setCurrentPage] = useState(0)
-  const piscologos = useSelector(state => state.psychologists)
+  const ITEMS_PER_PAGE = 6;
+  const piscologos = useSelector(state => state.psychologists);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const prevHandler = () => {
+    setCurrentPage(prevPage => Math.max(prevPage - 1, 0));
+  }
+
+  const nextHandler = () => {
+    setCurrentPage(prevPage => Math.min(prevPage + 1, Math.ceil(piscologos.length / ITEMS_PER_PAGE) - 1));
+  }
+
+  // Calcula los índices de inicio y fin de las tarjetas a mostrar en la página actual
+  const firstIndex = currentPage * ITEMS_PER_PAGE;
+  const lastIndex = Math.min(firstIndex + ITEMS_PER_PAGE, piscologos.length);
+
+  // Filtra las tarjetas a mostrar en la página actual
+  const currentItems = piscologos.slice(firstIndex, lastIndex);
+
   useEffect(() =>{
     if(piscologos.length === 0){
       //dispatch(getPsicologos())
     }
-    const slicedPsic =  piscologos.slice(0, ITEMS_PER_PAGE) 
-  }, [])
+  }, [piscologos]);
 
-    return (
-    
-        <div>
-        
-          {/* Columna para los filtros */}
-            <Filters />
-        
-          
-          {/* Columna para los contenedores de tarjetas */}
-          <CardsContainer/>
-          <Pagination/>
-         
-         
-            {/* <Pagination/> */}
+  return (
+    <div>
+      {/* Columna para los filtros */}
+      <Filters />
 
-          
-        
-      </div>
-
-          );
-  }
-  
+      {/* Columna para los contenedores de tarjetas */}
+      <Pagination currentPage={currentPage} nextHandler={nextHandler} prevHandler={prevHandler} />
+      <CardsContainer items={currentItems} />
+    </div>
+  );
+}

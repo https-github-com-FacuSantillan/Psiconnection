@@ -2,7 +2,7 @@ import { useSelector } from "react-redux"
 import Card from "../cards/Card"
 import style from "./CardsContainer.module.css"
 
-const CardsContainer = () => {
+const CardsContainer = ({items}) => {
     const psicologos = useSelector(state => state.psychologists);
     if(!Array.isArray(psicologos)){
         return <div>No hay recetas disponibles</div>
@@ -16,7 +16,7 @@ const CardsContainer = () => {
              <div className={style.container}>
                     {console.log(psicologos)}
 
-            {psicologos.map((psicologo) => {
+            {items.map((psicologo) => {
                 return <Card key = {psicologo.id}
                 id={psicologo.id}
                 nombre = {psicologo.nombre}
