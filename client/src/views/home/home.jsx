@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import Filters from "../../components/filters/filters";
 import Pagination from '../../components/Pagination/Pagination';
 import CardsContainer from '../../components/CardsContainer/CardsContainer';
+//importamos estilo 
+import style from "../home/home.module.css"
 export default function Home() {
   const ITEMS_PER_PAGE = 6;
   const piscologos = useSelector(state => state.psychologists);
@@ -30,13 +32,20 @@ export default function Home() {
   }, [piscologos]);
 
   return (
-    <div>
-      {/* Columna para los filtros */}
-      <Filters />
-
-      {/* Columna para los contenedores de tarjetas */}
-      <Pagination currentPage={currentPage} nextHandler={nextHandler} prevHandler={prevHandler} />
-      <CardsContainer items={currentItems} />
+    <div className={style.home}>
+      <div className={style.col1}>
+        {/* Columna para los filtros */}
+        <Filters />
+      </div>
+      
+      <div className={style.col2}>
+        {/* Columna para los contenedores de tarjetas */}
+        <div className={style.pagination_conteiner}>
+          <Pagination currentPage={currentPage} nextHandler={nextHandler} prevHandler={prevHandler} />
+        </div>
+        <CardsContainer items={currentItems} />
+      </div>
+      
     </div>
   );
 }
