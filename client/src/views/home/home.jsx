@@ -41,9 +41,9 @@ export default function Home() {
       <div className={style.col2}>
         {/* Columna para los contenedores de tarjetas */}
         <div className={style.pagination_conteiner}>
-          <Pagination currentPage={currentPage} nextHandler={nextHandler} prevHandler={prevHandler} />
+          <Pagination currentPage={currentPage} nextHandler={nextHandler} prevHandler={prevHandler} items={currentItems}/>
         </div>
-        <CardsContainer items={currentItems} />
+        {/* <CardsContainer items={currentItems} /> */}
       </div>
       
     </div>
