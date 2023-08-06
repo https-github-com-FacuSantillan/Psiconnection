@@ -24,7 +24,126 @@ Somos un equipo de estudiantes de Henry y este es nuestro proyecto final. Creamo
                 <div className={style.teamMembers}>
                     <div className={style.teamMember}>
                         <img className={style.imagen}
-                            src="https://i.pinimg.com/280x280_RS/0a/cb/2b/0acb2b50bae8e3b817c0678489d0bffe.jpg"
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=BlazerShirt&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src="https://avataaars.io/?avatarStyle=Circle&topType=LongHairStraight2&accessoriesType=Blank&hairColor=BlondeGolden&facialHairType=Blank&clotheType=CollarSweater&clotheColor=Gray02&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Pale"
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortCurly&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=PastelGreen&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShaggyMullet&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Red&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortFlat&accessoriesType=Blank&hairColor=Black&facialHairType=BeardLight&facialHairColor=Black&clotheType=ShirtCrewNeck&clotheColor=Gray02&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=ShirtCrewNeck&clotheColor=Black&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=LongHairBigHair&accessoriesType=Blank&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=PastelRed&eyeType=Default&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
+                            alt="Nombre del estudiante 1"
+                        />
+                        <a
+                            href="url_del_perfil_de_LinkedIn_del_estudiante_1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                className={style.linkedinLogo}
+                                src="..."
+                                alt="LinkedIn"
+                            />
+                        </a>
+                    </div>
+                    <div className={style.teamMember}>
+                        <img className={style.imagen}
+                            src='https://avataaars.io/?avatarStyle=Circle&topType=ShortHairShortWaved&accessoriesType=Prescription02&hairColor=BrownDark&facialHairType=BeardLight&facialHairColor=BrownDark&clotheType=Hoodie&clotheColor=Gray01&eyeType=Happy&eyebrowType=Default&mouthType=Smile&skinColor=Pale'
                             alt="Nombre del estudiante 1"
                         />
                         <a

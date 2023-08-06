@@ -1,5 +1,5 @@
 .container {
-    width: 100%;
+    width: 70%;
     max-width: 1200px;
     margin:  45% auto 0; /* Ajustar el margen superior y el centrado horizontal */
     padding: 20px;
@@ -45,7 +45,7 @@
     align-items: center;
   }
   
-  .teamMember img {
+  .imagen {
     width: 150px;
     height: 150px;
     border-radius: 50%;
