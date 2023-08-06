@@ -19,6 +19,7 @@ body, html {
   background-color: #606d8044; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex; 
+  margin-top: 200px ;
 }
 .form-container .right-side {
   background-image: url("./imagenForm.png");
@@ -36,6 +37,7 @@ body, html {
   color: #333;
   font-size: xx-large;
   font-weight: bold;
+  
 }
 .form-container h3{
   text-align: center;
@@ -47,9 +49,12 @@ body, html {
 .form-container input,
 .form-container select {
   width: 100%;
+  max-width: 400px; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 5px;
+  
 }
 
 .form-container select {
@@ -57,7 +62,8 @@ body, html {
   -webkit-appearance: none;
   background: url("arrow-down.svg") no-repeat right center;
   background-size: 20px;
-  padding-right: 30px;
+  padding-right: 20px;
+  
 }
 /** Para todos los botones  */
 .form-container button {
@@ -71,14 +77,21 @@ body, html {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-/* etiquieta Selecicona tu tipo de usuario */
-.form-container p{ 
+/** Titulo Hola */
+.p1{ 
   font-weight: bold;
-  margin-bottom: 20px; 
-  font-size:larger;
-
+  margin-top: 20%;
+  margin-bottom: 10%; 
+  font-size:x-large;
 }
-.form-container p1{
+/** etiquieta Selecicona tu tipo de usuario */
+.p2{ 
+  font-weight: bold;
+  margin-top: 20%;
+  margin-bottom: 10%; 
+  font-size:x-large;
+}
+.p3{
   margin-bottom: 20px; /* Añadir un margen inferior para separar el texto de los botones */
   font-weight: bold;
   font-size: xx-large;
@@ -95,7 +108,7 @@ body, html {
   background-position: right 8px center;
   appearance: none;
   -webkit-appearance: none;
-  padding-right: 30px;
+  padding-right: 20px;
 }
 
 .form-container select[name="especialidades"] {
@@ -110,16 +123,6 @@ body, html {
 .form-label{
   font-size: medium;
   margin-top: 5px;
-  margin-bottom: 10px;
-
-}
-.form-container p3{
-   display: inline-block;
-  padding: 10px 20px;
-  text-decoration:underline;
-  color: #000000;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: medium;
+  margin-bottom: 0px;
+  font-weight: bold;
 }
