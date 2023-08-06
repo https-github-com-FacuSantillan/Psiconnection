@@ -91,8 +91,8 @@ const Form = () => {
       {/* <h2>{formData.isLogin ? "" : ""}</h2> */}
       {!formData.tipoUsuario && !formData.isLogin && (
          <div>
-          <p1>¡Hola!</p1>
-          <p >Selecciona tu tipo de usuario:</p>
+          <p className="p1">¡Hola!</p>
+          <p className="p2">Selecciona tu tipo de usuario:</p>
          <div>
            <button onClick={() => handleUserTypeSelect("psicologo")}>Soy Psicólogo</button>
            <button onClick={() => handleUserTypeSelect("consultante")}>Soy Consultante</button>
@@ -137,9 +137,9 @@ const Form = () => {
               <button type="submit">Iniciar sesión</button>
               <p>
                 ¿No tienes cuenta? <hr />
-                  <p3 onClick={toggleLogin}>
+                  <p className="p2" onClick={toggleLogin}>
                     Registrarse
-                  </p3>
+                  </p>
               </p> 
             </>
           ) : (
@@ -164,7 +164,7 @@ const Form = () => {
               <input type="text" name="pais" value={formData.pais} onChange={handleChange} required />
 
               <label>Género:</label>
-              <select id="text" name="genero" value={formData.genero} onChange={handleChange} required>
+              <select type="text" name="genero" value={formData.genero} onChange={handleChange} required>
                 <option value="">Seleccione...</option>
                 <option value="masculino">Masculino</option>
                 <option value="femenino">Femenino</option>
