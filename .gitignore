@@ -1,0 +1,5 @@
+# Dependency directories
+api/node_modules/
+
+#for .env
+.env
