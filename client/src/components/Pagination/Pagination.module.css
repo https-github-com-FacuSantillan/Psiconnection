@@ -15,7 +15,6 @@
 }
 
 
-
 .pagination {
     position: absolute; /* Agregar posición absoluta para superponer el componente */
     top: 22%; /* Ajustar la posición vertical según sea necesario */
@@ -33,4 +32,14 @@
     gap: 20px;
   }
   
-  
+  .pageIndicator {
+    width: 30px;
+    height: 30px;
+    background-color: #567ebb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+  }
