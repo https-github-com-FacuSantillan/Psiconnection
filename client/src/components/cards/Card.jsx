@@ -20,6 +20,10 @@ export default function Cards(props) {
     <li className="list-group-item">${props.tarifa}</li>
   </ul>
     </div>
+    {/* <div className={s.ayuda}>
+    <img className='imagen' src={props.imagen} alt={props.nombre} style={{height: '20rem', width: '250px'}}/>
+
+    </div> */}
     </Link>
   );
 }

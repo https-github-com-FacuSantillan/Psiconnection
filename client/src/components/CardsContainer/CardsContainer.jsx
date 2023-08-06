@@ -11,7 +11,9 @@ const CardsContainer = () => {
 
 
     return(
-        <div className={style.container}>
+        <div className={style.mainContainer}>
+            <div className={style.wrapper}>
+             <div className={style.container}>
                     {console.log(psicologos)}
 
             {psicologos.map((psicologo) => {
@@ -25,6 +27,10 @@ const CardsContainer = () => {
                 />
             })}
         </div>
+        </div>
+        </div>
+        
+       
     )
 }
 
