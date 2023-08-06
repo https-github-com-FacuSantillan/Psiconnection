@@ -15,7 +15,7 @@ body {
     overflow-y: auto; /* Permitir el desplazamiento vertical si el contenido excede la altura del contenedor */
     position: relative; /* Agregar posición relativa para que el .wrapper esté posicionado de acuerdo con este contenedor */
   }
-  
+  /* cambio */
   .wrapper {
     position: absolute; /* Cambiar a posición absoluta para que el .wrapper sea posicionado en relación con el .container-principal */
     top: 30%;
