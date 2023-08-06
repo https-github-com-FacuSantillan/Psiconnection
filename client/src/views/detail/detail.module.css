@@ -7,14 +7,13 @@
     #1f1f20
 */
 .detail_conteiner{
-    margin-top: 28%;
+    margin-top: 32%;
     background-color:#DCE0E6;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding-top: 80px;
 }
 .detail{
     display: flex;
