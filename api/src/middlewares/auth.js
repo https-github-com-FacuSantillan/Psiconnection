@@ -7,7 +7,6 @@ const checkAuth = async (req, res, next) => {
         //TODO ---> authorization: Bearear 101010101010110101010
         const token = req.headers.authorization.split(' ').pop() //TODO: 1010101101010 separar el token
         const tokeData = await verifyToken(token)
-        console.log(tokeData);
 
         if(!tokeData.id) {
             res.status(409).json({error:"El TOKEN no se encuentra o es invalido"})
