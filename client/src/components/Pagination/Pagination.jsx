@@ -10,12 +10,11 @@ const Pagination = ({ currentPage, prevHandler, nextHandler }) => {
         {/* <h5>Page: 2</h5> */}
         <button className={style.btn} onClick={() => console.log("HOLA")}>Next</button>
       </div>
-      <CardsContainer/>
-      <div className={style.handlerCont}>
+      {/* <div className={style.handlerCont}>
         <button className={style.btn}onClick={() => console.log("HOLA")}>Prev</button>
         {/* <h5>Page: 2</h5> */}
-        <button className={style.btn} onClick={() => console.log("HOLA")}>Next</button>
-      </div>
+        {/* <button className={style.btn} onClick={() => console.log("HOLA")}>Next</button>
+      </div> */} 
     </div>
   );
 };

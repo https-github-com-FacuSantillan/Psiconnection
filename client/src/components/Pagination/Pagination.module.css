@@ -1,39 +1,36 @@
+/* pagination */
 .btn {
-    background-color: #567ebb;
-    color: #fff;
-    border: none;
-    outline: none;
-    padding: 8px 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .btn:hover {
-    background-color: #2b4c7e;
-  }
-.pagination {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en una columna vertical */
-    align-items: center; /* Centra horizontalmente los elementos */
-    gap: 20px; /* Espacio entre los elementos */
-    margin: 120px 40px 40px 389px; /* Ajusta el margen izquierdo para moverlo hacia la derecha */
-
+  background-color: #567ebb;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
+
+.btn:hover {
+  background-color: #2b4c7e;
+}
+
+
+
+.pagination {
+    position: absolute; /* Agregar posición absoluta para superponer el componente */
+    top: 22%; /* Ajustar la posición vertical según sea necesario */
+    left: 60%; /* Centrar horizontalmente el componente */
+    transform: translateX(-50%); /* Centrar horizontalmente el componente */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+    z-index: 1; /* Asegurar que el componente esté por encima del contenido */
+  }
   
   .handlerCont {
     display: flex;
-    gap: 20px; /* Espacio entre los botones y el texto */
-    margin-right: 80px;
-  }
-
-  .handlerCont button {
-    margin-right: 5px; /* Ajusta el margen entre los botones */
+    gap: 20px;
   }
   
-  .handlerCont h5 {
-    margin-left: 5px; /* Ajusta el margen entre los botones y el número de página */
-  }
-
- 
   

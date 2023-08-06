@@ -5,16 +5,14 @@
 }
 
 .carta {
-    width: 18rem;
+
+    width: 17rem;
     margin-bottom: 20px;
     /* Agregar sombra */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    border-radius: 8px; /* Agregar esquinas redondeadas */
     overflow: hidden; /* Evitar que la sombra se salga de la carta */
-    position: relative; /* Establecer posición para pseudo-elemento */
-    margin-bottom: 20px; /* Ajustamos el espacio entre las cards */
-    margin-right: 55px;
+    /* margin-right: 40px; */
 }
 
 /* Efecto de hover */
@@ -39,4 +37,14 @@
 
 .carta:hover::before {
     opacity: 1;
+}
+
+.ayuda{
+    flex: 1 1 300px; /* Permitir que las tarjetas se expandan y ocupen el espacio */
+
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    grid-row: 0;
 }
